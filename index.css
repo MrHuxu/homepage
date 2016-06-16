@@ -4,9 +4,11 @@ html, body, .full-height {
 
 .block {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: yellow;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  opacity: 0;
 }
 
 .container {
