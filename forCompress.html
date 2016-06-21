@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" type="image" href="https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/favicon.ico">
+    <title>xhu</title>
+  </head>
+  <style>
+
 body {
   width: 100%;
   height: 100%;
@@ -84,3 +92,39 @@ ul li {
     transform: translateY(-33%);
   }
 }
+
+
+  </style>
+  <body>
+    <div class="title">
+      <div class="visible">
+        <p>
+          xhu -
+        </p>
+        <ul>
+          <li>Programmer</li>
+          <li>Web Developer</li>
+          <li>Fighter !</li>
+        </ul>
+      </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script>
+
+$(() => {
+  for (let block of $('.block')) {
+    var $block = $(block);
+    var blockTopOffset = $block.css('top');
+    var duration = Math.random() * 1000;
+    $block.css({
+      top: 0
+    }).animate({
+      opacity: 1,
+      top: blockTopOffset
+    }, duration);
+  }
+});
+
+    </script>
+  </body>
+</html>
