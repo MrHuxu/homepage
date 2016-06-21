@@ -49,7 +49,7 @@ p {
   margin: 0;
 }
 
-ul {
+ul.honor {
   margin-top: 0;
   padding-left: 110px;
   text-align: left;
@@ -57,7 +57,7 @@ ul {
   animation: 8s linear 0s normal none infinite change;
 }
 
-ul li {
+ul.honor li {
   line-height: 40px;
   margin: 0;
 }
