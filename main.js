@@ -5,9 +5,10 @@ $(() => {
   var bindHoverEvent = (label) => {
     var $label = $(label);
     var labelLeftOffset = $label.css('left');
+    var labelWidth = $label.css('width');
     $label.hover(() => {
       $label.animate({
-        left: '-200px'
+        left: -(parseInt(labelWidth) - 25)
       }, 300);
     }, () => {
       $label.animate({

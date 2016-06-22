@@ -114,7 +114,6 @@ ul.honor li {
 }
 
 .left-panel .label {
-  width: 300px;
   position: absolute;
   padding: 3px 4px 3px 5px;
   height: 30px;
@@ -143,16 +142,25 @@ ul.honor li {
 
 .label.blog {
   top: 65px;
+  width: 200px;
   background-color: #daeef9;
 }
 
 .label.hackathon {
   top: 105px;
+  width: 190px;
   background-color: #d5d8d4;
 }
 
-.label.g-proxy {
+.label.snippets {
   top: 145px;
+  width: 310px;
+  background-color: #dadcdf;
+}
+
+.label.g-proxy {
+  top: 185px;
+  width: 220px;
   background-color: #e7eaef;
 }
 
