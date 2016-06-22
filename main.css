@@ -14,7 +14,7 @@ body {
   line-height: 40px;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   color: #ecf0f1;
-  height: 160px;
+  height: 15%;
   overflow: hidden;
 }
 
@@ -75,12 +75,49 @@ ul.honor li {
     transform: translateY(0);
   }
   25%,45% {
-    transform: translateY(-33%);
+    transform: translateY(-33.7%);
   }
   50%,70% {
     transform: translateY(-67%);
   }
   75%,95% {
-    transform: translateY(-33%);
+    transform: translateY(-33.7%);
   }
+}
+
+.detail {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  line-height: 40px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  color: #ecf0f1;
+  overflow: hidden;
+}
+
+@media (max-width: 750px) {
+  .detail {
+    width: 100%;
+  }
+}
+
+.skills {
+  vertical-align: top;
+  color: #f8c2ce;
+}
+
+.skills .item {
+  color: #fcf380;
+}
+
+.career {
+  vertical-align: top;
+  margin: -2px 0 0 0;
+  color: #fba77a;
+}
+
+.career a {
+  color: #cee6e9;
+  text-decoration: none;
 }

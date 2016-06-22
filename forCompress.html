@@ -22,7 +22,7 @@ body {
   line-height: 40px;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   color: #ecf0f1;
-  height: 160px;
+  height: 15%;
   overflow: hidden;
 }
 
@@ -57,7 +57,7 @@ p {
   margin: 0;
 }
 
-ul {
+ul.honor {
   margin-top: 0;
   padding-left: 110px;
   text-align: left;
@@ -65,7 +65,7 @@ ul {
   animation: 8s linear 0s normal none infinite change;
 }
 
-ul li {
+ul.honor li {
   line-height: 40px;
   margin: 0;
 }
@@ -83,15 +83,54 @@ ul li {
     transform: translateY(0);
   }
   25%,45% {
-    transform: translateY(-33%);
+    transform: translateY(-33.7%);
   }
   50%,70% {
     transform: translateY(-67%);
   }
   75%,95% {
-    transform: translateY(-33%);
+    transform: translateY(-33.7%);
   }
 }
+
+.detail {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  line-height: 40px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  color: #ecf0f1;
+  overflow: hidden;
+}
+
+@media (max-width: 750px) {
+  .detail {
+    width: 100%;
+  }
+}
+
+.skills {
+  vertical-align: top;
+  color: #f8c2ce;
+}
+
+.skills .item {
+  color: #fcf380;
+}
+
+.career {
+  vertical-align: top;
+  margin: -2px 0 0 0;
+  color: #fba77a;
+}
+
+.career a {
+  color: #cee6e9;
+  text-decoration: none;
+}
+
+
 
 
   </style>
@@ -101,10 +140,26 @@ ul li {
         <p>
           xhu -
         </p>
-        <ul>
+        <ul class='honor'>
           <li>Programmer</li>
           <li>Web Developer</li>
           <li>Fighter !</li>
+        </ul>
+      </div>
+    </div>
+    <div class='detail'>
+      <div class='skills'>
+        <h2> Skill Set </h2>
+        <ul>
+          <li>Language: <span class='item'>Ruby, JavaScript, some C++ & Scala, a little Go</span></li>
+          <li>Framework / Lib: <span class='item'>RoR, Node.js development stack & Front-end</span></li>
+        </ul>
+      </div>
+      <div class='career'>
+        <h2> Career </h2>
+        <ul>
+          <li>2014/07 ~ Now: <a target='_blank' href='http://freewheel.tv/'>FreeWheel Beijing Office</a></li>
+          <li>2010/09 ~ 2014/06: <a target='_blank' href='http://www.hit.edu.cn/'>Harbin Institute of Technology</a></li>
         </ul>
       </div>
     </div>
