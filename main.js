@@ -1,4 +1,24 @@
 $(() => {
+  $('.detail li').addClass('animated fadeInLeft');
+  $('.detail .label').addClass('animated fadeInRight');
+
+  var bindHoverEvent = (label) => {
+    var $label = $(label);
+    var labelLeftOffset = $label.css('left');
+    $label.hover(() => {
+      $label.animate({
+        left: '-200px'
+      }, 300);
+    }, () => {
+      $label.animate({
+        left: labelLeftOffset
+      }, 300);
+    });
+  };
+
+  for (let label of $('.left-panel .label')) {
+    bindHoverEvent(label);
+  }
   for (let block of $('.block')) {
     var $block = $(block);
     var blockTopOffset = $block.css('top');

@@ -3,14 +3,20 @@
   <head>
     <link rel="shortcut icon" type="image" href="https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/favicon.ico">
     <title>xhu</title>
-  </head>
-  <style>
+    <link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <style>
 
-body {
+
+      body {
   width: 100%;
   height: 100%;
   position: fixed;
   background-color: #34495e;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .title {
@@ -53,7 +59,6 @@ body {
 
 p {
   display: inline;
-  float: left;
   margin: 0;
 }
 
@@ -80,16 +85,16 @@ ul.honor li {
 }
 @keyframes change {
   0%, 20%, 100% {
-    transform: translateY(0);
+    transform: translateY(-33.7%);
   }
   25%,45% {
-    transform: translateY(-33.7%);
-  }
-  50%,70% {
     transform: translateY(-67%);
   }
+  50%,70% {
+    transform: translateY(-100%);
+  }
   75%,95% {
-    transform: translateY(-33.7%);
+    transform: translateY(-67%);
   }
 }
 
@@ -101,7 +106,73 @@ ul.honor li {
   line-height: 40px;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   color: #ecf0f1;
-  overflow: hidden;
+}
+
+.left-panel, .right-panel {
+  display: inline-block;
+}
+
+.left-panel {
+  position: absolute;
+  vertical-align: top;
+  padding: 35px 0 0 0;
+  margin: 0 -5px 0 0;
+  width: 30px;
+  height: 100%;
+  position: 4;
+}
+
+.left-panel .label {
+  width: 300px;
+  position: absolute;
+  padding: 3px 4px 3px 5px;
+  height: 30px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #3e566a;
+}
+
+.label img {
+  width: 20px;
+  height: 20px;
+}
+
+.label a {
+  color: #6c4c96;
+}
+
+.label-left, .label-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.label-right {
+  margin: -5px 0 0 0;
+}
+
+.label.blog {
+  top: 65px;
+  background-color: #daeef9;
+}
+
+.label.hackathon {
+  top: 105px;
+  background-color: #d5d8d4;
+}
+
+.label.g-proxy {
+  top: 145px;
+  background-color: #e7eaef;
+}
+
+.right-panel {
+  position: relative;
+  margin: 0 0 0 30px;
+  padding: 0 0 0 20px;
+  border-left: 1px gray solid;
+  overflow-y: hidden;
+  background-color: #34495e;
+  z-index: 99;
 }
 
 @media (max-width: 750px) {
@@ -127,13 +198,10 @@ ul.honor li {
 
 .career a {
   color: #cee6e9;
-  text-decoration: none;
 }
 
-
-
-
-  </style>
+      </style>
+  </head>
   <body>
     <div class="title">
       <div class="visible">
@@ -148,25 +216,61 @@ ul.honor li {
       </div>
     </div>
     <div class='detail'>
-      <div class='skills'>
-        <h2> Skill Set </h2>
-        <ul>
-          <li>Language: <span class='item'>Ruby, JavaScript, some C++ & Scala, a little Go</span></li>
-          <li>Framework / Lib: <span class='item'>RoR, Node.js development stack & Front-end</span></li>
-        </ul>
+      <div class='left-panel'>
+        <div class='label blog'>
+          <div class='label-left'><img src='https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/favicon.ico'/></div>
+          <div class='label-right'><a target='_blank' href='http://blog.xhu.me'>blog.xhu.me</a>, My blog</div>
+        </div>
+        <div class='label hackathon'>
+          <div class='label-left'><img src='http://h.xhu.me/favicon.ico'/></div>
+          <div class='label-right'><a target='_blank' href='http://h.xhu.me'>h.xhu.me</a>, Little CMS</div>
+        </div>
+        <div class='label g-proxy'>
+          <div class='label-left'><img src='https://www.google.com/images/branding/product/ico/googleg_lodp.ico'/></div>
+          <div class='label-right'><a target='_blank' href='https://g.xhu.me'>g.xhu.me</a>, Google proxy</div>
+        </div>
       </div>
-      <div class='career'>
-        <h2> Career </h2>
-        <ul>
-          <li>2014/07 ~ Now: <a target='_blank' href='http://freewheel.tv/'>FreeWheel Beijing Office</a></li>
-          <li>2010/09 ~ 2014/06: <a target='_blank' href='http://www.hit.edu.cn/'>Harbin Institute of Technology</a></li>
-        </ul>
+      <div class='right-panel'>
+        <div class='skills'>
+          <h2> Skill Set </h2>
+          <ul>
+            <li>Language: <span class='item'>Ruby, JavaScript, some C++ & Scala, a little Go</span></li>
+            <li>Framework / Lib: <span class='item'>RoR, Node.js development stack & Front-end</span></li>
+          </ul>
+        </div>
+        <div class='career'>
+          <h2> Career </h2>
+          <ul>
+            <li>2014/07 ~ Now: <a target='_blank' href='http://freewheel.tv/'>FreeWheel Beijing Office</a></li>
+            <li>2010/09 ~ 2014/06: <a target='_blank' href='http://www.hit.edu.cn/'>Harbin Institute of Technology</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
     <script>
 
-$(() => {
+      $(() => {
+  $('.detail li').addClass('animated fadeInLeft');
+  $('.detail .label').addClass('animated fadeInRight');
+
+  var bindHoverEvent = (label) => {
+    var $label = $(label);
+    var labelLeftOffset = $label.css('left');
+    $label.hover(() => {
+      $label.animate({
+        left: '-200px'
+      }, 300);
+    }, () => {
+      $label.animate({
+        left: labelLeftOffset
+      }, 300);
+    });
+  };
+
+  for (let label of $('.left-panel .label')) {
+    bindHoverEvent(label);
+  }
   for (let block of $('.block')) {
     var $block = $(block);
     var blockTopOffset = $block.css('top');
@@ -179,7 +283,6 @@ $(() => {
     }, duration);
   }
 });
-
     </script>
   </body>
 </html>

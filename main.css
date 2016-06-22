@@ -5,6 +5,11 @@ body {
   background-color: #34495e;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .title {
   position: absolute;
   top: 20%;
@@ -45,7 +50,6 @@ body {
 
 p {
   display: inline;
-  float: left;
   margin: 0;
 }
 
@@ -72,16 +76,16 @@ ul.honor li {
 }
 @keyframes change {
   0%, 20%, 100% {
-    transform: translateY(0);
+    transform: translateY(-33.7%);
   }
   25%,45% {
-    transform: translateY(-33.7%);
-  }
-  50%,70% {
     transform: translateY(-67%);
   }
+  50%,70% {
+    transform: translateY(-100%);
+  }
   75%,95% {
-    transform: translateY(-33.7%);
+    transform: translateY(-67%);
   }
 }
 
@@ -93,7 +97,73 @@ ul.honor li {
   line-height: 40px;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   color: #ecf0f1;
-  overflow: hidden;
+}
+
+.left-panel, .right-panel {
+  display: inline-block;
+}
+
+.left-panel {
+  position: absolute;
+  vertical-align: top;
+  padding: 35px 0 0 0;
+  margin: 0 -5px 0 0;
+  width: 30px;
+  height: 100%;
+  position: 4;
+}
+
+.left-panel .label {
+  width: 300px;
+  position: absolute;
+  padding: 3px 4px 3px 5px;
+  height: 30px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: #3e566a;
+}
+
+.label img {
+  width: 20px;
+  height: 20px;
+}
+
+.label a {
+  color: #6c4c96;
+}
+
+.label-left, .label-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.label-right {
+  margin: -5px 0 0 0;
+}
+
+.label.blog {
+  top: 65px;
+  background-color: #daeef9;
+}
+
+.label.hackathon {
+  top: 105px;
+  background-color: #d5d8d4;
+}
+
+.label.g-proxy {
+  top: 145px;
+  background-color: #e7eaef;
+}
+
+.right-panel {
+  position: relative;
+  margin: 0 0 0 30px;
+  padding: 0 0 0 20px;
+  border-left: 1px gray solid;
+  overflow-y: hidden;
+  background-color: #34495e;
+  z-index: 99;
 }
 
 @media (max-width: 750px) {
@@ -119,5 +189,4 @@ ul.honor li {
 
 .career a {
   color: #cee6e9;
-  text-decoration: none;
 }
