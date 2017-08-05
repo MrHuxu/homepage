@@ -198,3 +198,49 @@ ul.honor li {
 .career a {
   color: #cee6e9;
 }
+
+#detail {
+  line-height: 40px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+#left-container,
+#right-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#left-container {
+  width: 70px;
+}
+
+#right-container {
+  width: 529px;
+  border-left: 1px gray solid;
+}
+
+#websites-container {
+  height: 400px;
+  padding: 40px 0 0 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+}
+
+.websites-ele {
+  width: 700px;
+  height: 30px;
+  padding: 3px 4px 3px 5px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px
+}
+
+.websites-ele {
+  display: inline-block;
+}
+
+.websites-ele img {
+  width: 20px;
+  height: 20px;
+}
