@@ -18,7 +18,7 @@ careerItemsContainer.selectAll('li')
   .enter()
   .append('li')
   .html(d => `
-    <p> ${d.timeRange} : </p>
+    <p>${d.timeRange}&nbsp;:&nbsp;</p>
     <a
       class='career-detail'
       target='_blank'

@@ -18,6 +18,6 @@ skillsItemsContainer.selectAll('li')
   .enter()
   .append('li')
   .html(d => `
-    <p> ${d.key} : <p>
-    <p class='skills-detail'> ${d.value} </p>
+    <p>${d.key}&nbsp:&nbsp;<p>
+    <p class='skills-detail'>${d.value}</p>
   `);

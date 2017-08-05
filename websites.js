@@ -29,8 +29,8 @@ const websitesEles = websitesContainer.selectAll('.websites-ele')
 
 websitesEles.html(d => `
   <img src='${d.favicon}' />
-  <a target='_blank' href='http://${d.url}'> ${d.url} </a>, 
-  <p> ${d.label} </p>F
+  <a target='_blank' href='http://${d.url}'>${d.url}</a>
+  <p>,&nbsp;${d.label}</p>F
 `);
   
 websitesEles.on('mouseover', function (d, i) {
