@@ -47,6 +47,6 @@ websitesEles.on('mouseover', function (d, i) {
  
 websitesEles.transition()
   .duration(1000)
-  .delay((d, i) => i * 200)
+  .delay((d, i) => i * 200 + 600)
   .style('margin-left', `${websitesContainerWidth - 30}px`);
 

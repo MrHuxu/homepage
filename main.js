@@ -3,7 +3,7 @@ const { select } = d3;
 // create container for animations
 const bodyWidth = document.body.clientWidth;
 const bodyHeight = document.body.clientHeight;
-const containerWidth = 600;
+const containerWidth = 660;
 const containerHeight = 350;
 const div = select('body')
   .append('div')

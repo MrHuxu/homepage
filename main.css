@@ -89,116 +89,6 @@ ul.honor li {
   }
 }
 
-.detail {
-  position: absolute;
-  top: 27%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  line-height: 40px;
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-  color: #ecf0f1;
-}
-
-.left-panel, .right-panel {
-  display: inline-block;
-}
-
-.left-panel {
-  position: absolute;
-  vertical-align: top;
-  padding: 35px 0 0 0;
-  margin: 0 -5px 0 0;
-  width: 30px;
-  height: 100%;
-  position: 4;
-}
-
-.left-panel .label {
-  position: absolute;
-  padding: 3px 4px 3px 5px;
-  height: 30px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  color: #3e566a;
-}
-
-.label img {
-  width: 20px;
-  height: 20px;
-}
-
-.label a {
-  color: #6c4c96;
-}
-
-.label-left, .label-right {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.label-right {
-  margin: -5px 0 0 0;
-}
-
-.label.blog {
-  top: 65px;
-  width: 200px;
-  background-color: #daeef9;
-}
-
-.label.hackathon {
-  top: 105px;
-  width: 190px;
-  background-color: #d5d8d4;
-}
-
-.label.snippets {
-  top: 145px;
-  width: 310px;
-  background-color: #dadcdf;
-}
-
-.label.g-proxy {
-  top: 185px;
-  width: 220px;
-  background-color: #e7eaef;
-}
-
-.right-panel {
-  position: relative;
-  margin: 0 0 0 30px;
-  padding: 0 0 0 20px;
-  border-left: 1px gray solid;
-  overflow-y: hidden;
-  background-color: #34495e;
-  z-index: 99;
-}
-
-@media (max-width: 750px) {
-  .detail {
-    width: 100%;
-  }
-}
-
-.skills {
-  vertical-align: top;
-  color: #f8c2ce;
-}
-
-.skills .item {
-  color: #fcf380;
-}
-
-.career {
-  vertical-align: top;
-  margin: -2px 0 0 0;
-  color: #fba77a;
-}
-
-.career a {
-  color: #cee6e9;
-}
-
 #detail {
   line-height: 40px;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -217,12 +107,13 @@ ul.honor li {
 
 #right-container {
   width: 529px;
-  border-left: 1px gray solid;
+  overflow: hidden;
+  border-left: 2px gray solid;
 }
 
 #websites-container {
   height: 400px;
-  padding: 40px 0 0 0;
+  padding: 100px 0 0 0;
   overflow: hidden;
   position: absolute;
   right: 0;
@@ -243,4 +134,29 @@ ul.honor li {
 .websites-ele img {
   width: 20px;
   height: 20px;
+}
+
+#skills-container  {
+  width: 700px;
+  margin-left: 20px;
+}
+
+#skills-container * {
+  color: #f8c2ce;
+}
+
+#skills-container .skills-detail {
+  color: #fcf380;
+}
+
+#career-container {
+  margin-left: 20px;
+}
+
+#career-container * {
+  color: #fba77a;
+}
+
+#career-container .career-detail {
+  color: #cee6e9;
 }
