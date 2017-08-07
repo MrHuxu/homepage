@@ -1,3 +1,4 @@
+<!-- should be compressed by https://htmlcompressor.com/compressor/ -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -131,14 +132,32 @@ ul.honor li {
   width: 700px;
   height: 30px;
   padding: 3px 4px 3px 5px;
+  background-color: #c4c9cc;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px
+}
+
+.websites-ele > div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.websites-ele .websites-detail-container {
+  margin: -4px 0 0 0;
 }
 
 .websites-ele img {
   width: 20px;
   height: 20px;
   margin-right: 4px;
+}
+
+.websites-ele a {
+  color: #0079bf;
+}
+
+.websites-ele p {
+  color: #666666;
 }
 
 #skills-container  {
@@ -244,25 +263,13 @@ const career = [{
 }];
 
 
-
 // websites container
 const websitesContainerWidth = (bodyWidth - containerWidth) / 2 + 70;
 const websitesContainer = leftContainer.append('div')
   .attr('id', 'websites-container')
   .style('width', `${websitesContainerWidth}px`);
 
-const websitesMetadatas = [{
-  background : '#daeef9',
-  width      : 210
-}, {
-  background : '#d5d8d4',
-  width      : 200
-}, {
-  background : '#dadcdf',
-  width      : 320
-}, {
-  background : '#e7eaef'
-}];
+const websitesEleWidths = [215, 205, 325];
 
 // websites elements
 const websitesEles = websitesContainer.selectAll('.websites-ele')
@@ -270,20 +277,23 @@ const websitesEles = websitesContainer.selectAll('.websites-ele')
   .enter()
   .append('div')
   .attr('class', 'websites-ele')
-  .style('margin-left', `${websitesContainerWidth + 80}px`)
-  .style('background-color', (d, i) => websitesMetadatas[i].background);
+  .style('margin-left', `${websitesContainerWidth + 80}px`);
 
 websitesEles.html(d => `
-  <img src='${d.favicon}' />
-  <a target='_blank' href='http://${d.url}'>${d.url}</a>
-  <p>,&nbsp;${d.label}</p>
+  <div>
+    <img src="${d.favicon}" />
+  </div>
+  <div class="websites-detail-container">
+    <a target="_blank" href="http://${d.url}">${d.url}</a>
+    <p>,&nbsp;${d.label}</p>
+  </div>
 `);
   
 websitesEles.on('mouseover', function (d, i) {
   select(this)
     .transition()
     .duration(500)
-    .style('margin-left', `${websitesContainerWidth - websitesMetadatas[i].width}px`);
+    .style('margin-left', `${websitesContainerWidth - websitesEleWidths[i]}px`);
 }).on('mouseout', function () {
   select(this)
     .transition()
@@ -295,6 +305,7 @@ websitesEles.transition()
   .duration(1000)
   .delay((d, i) => i * 200 + 600)
   .style('margin-left', `${websitesContainerWidth - 30}px`);
+
 
 const skillsContainerHeight = containerHeight * 0.45;
 const skillsContainer = rightContainer.append('div')

@@ -5,18 +5,7 @@ const websitesContainer = leftContainer.append('div')
   .attr('id', 'websites-container')
   .style('width', `${websitesContainerWidth}px`);
 
-const websitesMetadatas = [{
-  background : '#daeef9',
-  width      : 210
-}, {
-  background : '#d5d8d4',
-  width      : 200
-}, {
-  background : '#dadcdf',
-  width      : 320
-}, {
-  background : '#e7eaef'
-}];
+const websitesEleWidths = [215, 205, 325];
 
 // websites elements
 const websitesEles = websitesContainer.selectAll('.websites-ele')
@@ -24,20 +13,23 @@ const websitesEles = websitesContainer.selectAll('.websites-ele')
   .enter()
   .append('div')
   .attr('class', 'websites-ele')
-  .style('margin-left', `${websitesContainerWidth + 80}px`)
-  .style('background-color', (d, i) => websitesMetadatas[i].background);
+  .style('margin-left', `${websitesContainerWidth + 80}px`);
 
 websitesEles.html(d => `
-  <img src='${d.favicon}' />
-  <a target='_blank' href='http://${d.url}'>${d.url}</a>
-  <p>,&nbsp;${d.label}</p>
+  <div>
+    <img src="${d.favicon}" />
+  </div>
+  <div class="websites-detail-container">
+    <a target="_blank" href="http://${d.url}">${d.url}</a>
+    <p>,&nbsp;${d.label}</p>
+  </div>
 `);
   
 websitesEles.on('mouseover', function (d, i) {
   select(this)
     .transition()
     .duration(500)
-    .style('margin-left', `${websitesContainerWidth - websitesMetadatas[i].width}px`);
+    .style('margin-left', `${websitesContainerWidth - websitesEleWidths[i]}px`);
 }).on('mouseout', function () {
   select(this)
     .transition()

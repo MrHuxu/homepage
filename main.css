@@ -125,14 +125,32 @@ ul.honor li {
   width: 700px;
   height: 30px;
   padding: 3px 4px 3px 5px;
+  background-color: #c4c9cc;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px
+}
+
+.websites-ele > div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.websites-ele .websites-detail-container {
+  margin: -4px 0 0 0;
 }
 
 .websites-ele img {
   width: 20px;
   height: 20px;
   margin-right: 4px;
+}
+
+.websites-ele a {
+  color: #0079bf;
+}
+
+.websites-ele p {
+  color: #666666;
 }
 
 #skills-container  {
