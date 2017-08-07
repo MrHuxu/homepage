@@ -74,6 +74,7 @@ ul.honor li {
     opacity: 1;
   }
 }
+
 @keyframes change {
   0%, 20%, 100% {
     transform: translateY(-33.7%);
@@ -102,11 +103,11 @@ ul.honor li {
 }
 
 #left-container {
-  width: 70px;
+  width: 90px;
 }
 
 #right-container {
-  width: 529px;
+  width: 509px;
   overflow: hidden;
   border-left: 2px gray solid;
 }

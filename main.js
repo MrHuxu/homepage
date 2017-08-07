@@ -9,7 +9,7 @@ const div = select('body')
   .append('div')
   .attr('id', 'detail')
   .style('width', `${containerWidth}px`)
-  .style('margin', `250px 0 0 ${(bodyWidth - containerWidth) / 2}px`)
+  .style('margin', `14% 0 0 ${(bodyWidth - containerWidth) / 2}px`)
   .style('height', `${containerHeight}px`);
 
 // seperate the container into two parts
