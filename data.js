@@ -1,15 +1,28 @@
 const websites = [{
   favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/favicon.ico',
   url     : 'blog.xhu.me',
-  label   : 'My blog'
+  label   : 'My blog',
+  width   : 215
 }, {
   favicon : 'http://h.xhu.me/favicon.ico',
   url     : 'h.xhu.me',
-  label   : 'Little CMS'
+  label   : 'Little CMS',
+  width   : 205
 }, {
   favicon : 'https://raw.githubusercontent.com/MrHuxu/MySnippets/master/vendor/icon/logo.ico',
   url     : 'snippets.xhu.me',
-  label   : 'Snippets manager'
+  label   : 'Snippets manager',
+  width   : 325
+}, {
+  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/yrel/favicon.png',
+  url     : 'yrel.xhu.me',
+  label   : 'A script language written in Go',
+  width   : 390
+}, {
+  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/bar/favicon.png',
+  url     : 'bar.xhu.me',
+  label   : 'A place to store words',
+  width   : 320
 }];
 
 const skills = [{

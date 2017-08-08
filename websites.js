@@ -5,8 +5,6 @@ const websitesContainer = leftContainer.append('div')
   .attr('id', 'websites-container')
   .style('width', `${websitesContainerWidth}px`);
 
-const websitesEleWidths = [215, 205, 325];
-
 // websites elements
 const websitesEles = websitesContainer.selectAll('.websites-ele')
   .data(websites)
@@ -29,7 +27,7 @@ websitesEles.on('mouseover', function (d, i) {
   select(this)
     .transition()
     .duration(500)
-    .style('margin-left', `${websitesContainerWidth - websitesEleWidths[i]}px`);
+    .style('margin-left', `${websitesContainerWidth - d.width}px`);
 }).on('mouseout', function () {
   select(this)
     .transition()
