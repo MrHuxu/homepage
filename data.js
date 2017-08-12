@@ -1,5 +1,5 @@
 const websites = [{
-  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/favicon.ico',
+  favicon : 'http://blog.xhu.me/assets/images/x-billabong.png',
   url     : 'blog.xhu.me',
   label   : 'My blog',
   width   : 215
