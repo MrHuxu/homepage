@@ -1,297 +1,355 @@
 <!-- should be compressed by https://htmlcompressor.com/compressor/ -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="shortcut icon" type="image" href="https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/favicon.ico">
-    <title>xhu</title>
-    <style>
-body {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: #34495e;
-}
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
+<head>
+  <link rel="shortcut icon" type="image" href="https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/favicon.ico">
+  <title>xhu</title>
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>xhu</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background-color: #393E46;
+    }
 
-.title {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 35px;
-  line-height: 40px;
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-  color: #ecf0f1;
-  height: 15%;
-  overflow: hidden;
-}
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-.visible {
-  font-weight: 600;
-  overflow: hidden;
-  height: 40px;
-  padding: 0 40px;
-}
-.visible:before {
-  content: '[';
-  left: 0;
-  line-height: 40px;
-}
-.visible:after {
-  content: ']';
-  position: absolute;
-  right: 0;
-  line-height: 40px;
-}
-.visible:after, .visible:before {
-  position: absolute;
-  top: 0;
-  color: #16a085;
-  font-size: 42px;
-  animation: 2s linear 0s normal none infinite opacity;
-}
+    .title {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 35px;
+      line-height: 40px;
+      font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+      color: #ecf0f1;
+      height: 15%;
+      overflow: hidden;
+    }
 
-p {
-  display: inline;
-  margin: 0;
-}
+    .visible {
+      font-weight: 600;
+      overflow: hidden;
+      height: 40px;
+      padding: 0 40px;
+    }
 
-ul.honor {
-  margin-top: 0;
-  padding-left: 110px;
-  text-align: left;
-  list-style: none;
-  animation: 8s linear 0s normal none infinite change;
-}
+    .visible:before {
+      content: '[';
+      left: 0;
+      line-height: 40px;
+    }
 
-ul.honor li {
-  line-height: 40px;
-  margin: 0;
-}
+    .visible:after {
+      content: ']';
+      position: absolute;
+      right: 0;
+      line-height: 40px;
+    }
 
-@keyframes opacity {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
+    .visible:after,
+    .visible:before {
+      position: absolute;
+      top: 0;
+      color: #16a085;
+      font-size: 42px;
+      animation: 2s linear 0s normal none infinite opacity;
+    }
 
-@keyframes change {
-  0%, 20%, 100% {
-    transform: translateY(-33.7%);
-  }
-  25%,45% {
-    transform: translateY(-67%);
-  }
-  50%,70% {
-    transform: translateY(-100%);
-  }
-  75%,95% {
-    transform: translateY(-67%);
-  }
-}
+    p {
+      display: inline;
+      margin: 0;
+    }
 
-#detail {
-  line-height: 40px;
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-}
+    ul.honor {
+      margin-top: 0;
+      padding-left: 110px;
+      text-align: left;
+      list-style: none;
+      animation: 8s linear 0s normal none infinite change;
+    }
 
-#left-container,
-#right-container {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-}
+    ul.honor li {
+      line-height: 40px;
+      margin: 0;
+    }
 
-#left-container {
-  width: 90px;
-}
+    @keyframes opacity {
+      0%,
+      100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
 
-#right-container {
-  width: 509px;
-  overflow: hidden;
-  border-left: 2px gray solid;
-}
+    @keyframes change {
+      0%,
+      20%,
+      100% {
+        transform: translateY(-33.7%);
+      }
+      25%,
+      45% {
+        transform: translateY(-67%);
+      }
+      50%,
+      70% {
+        transform: translateY(-100%);
+      }
+      75%,
+      95% {
+        transform: translateY(-67%);
+      }
+    }
 
-#websites-container {
-  height: 400px;
-  padding: 70px 0 0 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-}
+    .icons {
+      position: absolute;
+      bottom: 20%;
+      width: 100%;
+      text-align: center;
+    }
 
-.websites-ele {
-  display: inline-block;
-  width: 700px;
-  height: 30px;
-  padding: 3px 4px 3px 5px;
-  background-color: #c4c9cc;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px
-}
+    .icons ul {
+      margin: 0 0 0 -20px;
+    }
 
-.websites-ele > div {
-  display: inline-block;
-  vertical-align: top;
-}
+    .icons a {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 25px;
+      letter-spacing: 20px;
+    }
 
-.websites-ele .websites-detail-container {
-  margin: -4px 0 0 0;
-}
+    .icons li {
+      display: inline-block;
+    }
 
-.websites-ele img {
-  width: 20px;
-  height: 20px;
-  margin-right: 4px;
-}
+    #detail {
+      line-height: 40px;
+      font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    }
 
-.websites-ele a {
-  color: #0079bf;
-}
+    #left-container,
+    #right-container {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+    }
 
-.websites-ele p {
-  color: #666666;
-}
+    #left-container {
+      width: 90px;
+    }
 
-#skills-container  {
-  width: 700px;
-  margin-left: 20px;
-}
+    #right-container {
+      width: 509px;
+      overflow: hidden;
+      border-left: 2px gray solid;
+    }
 
-#skills-container * {
-  color: #f8c2ce;
-}
+    #websites-container {
+      height: 400px;
+      padding: 70px 0 0 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+    }
 
-#skills-container .skills-detail {
-  color: #fcf380;
-}
+    .websites-ele {
+      display: inline-block;
+      width: 700px;
+      height: 30px;
+      padding: 3px 4px 3px 5px;
+      background-color: #E6E6E6;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px
+    }
 
-#career-container {
-  margin-left: 20px;
-}
+    .websites-ele>div {
+      display: inline-block;
+      vertical-align: top;
+    }
 
-#career-container * {
-  color: #fba77a;
-}
+    .websites-ele .websites-detail-container {
+      margin: -4px 0 0 0;
+    }
 
-#career-container .career-detail {
-  color: #cee6e9;
-}
-    
-    </style>
-  </head>
-  <body>
-    <div class="title">
-      <div class="visible">
-        <p>
-          xhu -
-        </p>
-        <ul class='honor'>
-          <li>Programmer</li>
-          <li>Web Developer</li>
-          <li>Fighter !</li>
-        </ul>
-      </div>
+    .websites-ele img {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
+
+    .websites-ele a {
+      color: #0079bf;
+    }
+
+    .websites-ele p {
+      color: #666666;
+    }
+
+    #skills-container {
+      width: 700px;
+      margin-left: 20px;
+    }
+
+    #skills-container * {
+      color: #f8c2ce;
+    }
+
+    #skills-container .skills-detail {
+      color: #fcf380;
+    }
+
+    #career-container {
+      margin-left: 20px;
+    }
+
+    #career-container * {
+      color: #fba77a;
+    }
+
+    #career-container .career-detail {
+      color: #00ADB5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="title">
+    <div class="visible">
+      <p>
+        xhu -
+      </p>
+      <ul class='honor'>
+        <li>Programmer</li>
+        <li>Web Developer</li>
+        <li>Fighter !</li>
+      </ul>
     </div>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script>
- 
-const { select } = d3;
+  </div>
+  <div class="icons">
+    <ul class="fa">
+      <li>
+        <a target="_blank" href="http://blog.xhu.me/" class="fa fa-pencil"></a>
+      </li>
+      <li>
+        <a target="_blank" href="https://twitter.com/hxtheone" class="fa fa-twitter"></a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/MrHuxu" class="fa fa-github"></a>
+      </li>
+      <li>
+        <a target="_blank" href="http://steamcommunity.com/id/TDFJ" class="fa fa-steam"></a>
+      </li>
+      <li>
+        <a target="_blank" href="http://www.linkedin.com/in/xu-hu-12a9ab111/" class="fa fa-linkedin"></a>
+      </li>
+      <li>
+        <a target="_blank" href="mailto:hxtheone@gmail.com" class="fa fa-envelope-o"></a>
+      </li>
+    </ul>
+  </div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+    const {
+      select
+    } = d3;
 
-// create container for animations
-const bodyWidth = document.body.clientWidth;
-const bodyHeight = document.body.clientHeight;
-const containerWidth = 660;
-const containerHeight = 350;
-const div = select('body')
-  .append('div')
-  .attr('id', 'detail')
-  .style('width', `${containerWidth}px`)
-  .style('margin', `14% 0 0 ${(bodyWidth - containerWidth) / 2}px`)
-  .style('height', `${containerHeight}px`);
+    // create container for animations
+    const bodyWidth = document.body.clientWidth;
+    const bodyHeight = document.body.clientHeight;
+    const containerWidth = 660;
+    const containerHeight = 350;
+    const div = select('body')
+      .append('div')
+      .attr('id', 'detail')
+      .style('width', `${containerWidth}px`)
+      .style('margin', `14% 0 0 ${(bodyWidth - containerWidth) / 2}px`)
+      .style('height', `${containerHeight}px`);
 
-// seperate the container into two parts
-const leftContainer = div.append('div')
-  .attr('id', 'left-container')
-  .style('height', `${containerHeight}px`);
-const rightContainer = div.append('div')
-  .attr('id', 'right-container')
-  .style('height', `${containerHeight}px`);
-
-
-const websites = [{
-  favicon : 'http://blog.xhu.me/assets/images/x-billabong.png',
-  url     : 'blog.xhu.me',
-  label   : 'My blog',
-  width   : 215
-}, {
-  favicon : 'http://h.xhu.me/favicon.ico',
-  url     : 'h.xhu.me',
-  label   : 'Little CMS',
-  width   : 205
-}, {
-  favicon : 'https://raw.githubusercontent.com/MrHuxu/MySnippets/master/vendor/icon/logo.ico',
-  url     : 'snippets.xhu.me',
-  label   : 'Snippets manager',
-  width   : 325
-}, {
-  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/yrel/favicon.png',
-  url     : 'yrel.xhu.me',
-  label   : 'A script language written in Go',
-  width   : 390
-}, {
-  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/bar/favicon.png',
-  url     : 'bar.xhu.me',
-  label   : 'A place to store words',
-  width   : 320
-}];
-
-const skills = [{
-  key   : 'Languages',
-  value : 'Ruby, JavaScript, Go, a little C++ & Scala',
-}, {
-  key   : 'Framework / Lib',
-  value : 'RoR, Go web service, Node.js full stack'
-}];
-
-const career = [{
-  timeRange   : '2014/07 ~ Now',
-  description : {
-    url   : 'http://freewheel.tv/',
-    label : 'FreeWheel Beijing Office'
-  }
-}, {
-  timeRange   : '2010/09 ~ 2014/06',
-  description : {
-    url   : 'http://www.hit.edu.cn/',
-    label : 'Harbin Institute of Technology'
-  }
-}];
+    // seperate the container into two parts
+    const leftContainer = div.append('div')
+      .attr('id', 'left-container')
+      .style('height', `${containerHeight}px`);
+    const rightContainer = div.append('div')
+      .attr('id', 'right-container')
+      .style('height', `${containerHeight}px`);
 
 
+    const websites = [{
+      favicon: 'http://blog.xhu.me/assets/images/x-billabong.png',
+      url: 'blog.xhu.me',
+      label: 'My blog',
+      width: 215
+    }, {
+      favicon: 'http://h.xhu.me/favicon.ico',
+      url: 'h.xhu.me',
+      label: 'Little CMS',
+      width: 205
+    }, {
+      favicon: 'https://raw.githubusercontent.com/MrHuxu/MySnippets/master/vendor/icon/logo.ico',
+      url: 'snippets.xhu.me',
+      label: 'Snippets manager',
+      width: 325
+    }, {
+      favicon: 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/yrel/favicon.png',
+      url: 'yrel.xhu.me',
+      label: 'A script language written in Go',
+      width: 390
+    }, {
+      favicon: 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/bar/favicon.png',
+      url: 'bar.xhu.me',
+      label: 'A place to store words',
+      width: 320
+    }];
 
-// websites container
-const websitesContainerWidth = (bodyWidth - containerWidth) / 2 + 70;
-const websitesContainer = leftContainer.append('div')
-  .attr('id', 'websites-container')
-  .style('width', `${websitesContainerWidth}px`);
+    const skills = [{
+      key: 'Languages',
+      value: 'Ruby, JavaScript, Go, a little C++ & Scala',
+    }, {
+      key: 'Framework / Lib',
+      value: 'RoR, Go web service, Node.js full stack'
+    }];
 
-// websites elements
-const websitesEles = websitesContainer.selectAll('.websites-ele')
-  .data(websites)
-  .enter()
-  .append('div')
-  .attr('class', 'websites-ele')
-  .style('margin-left', `${websitesContainerWidth + 80}px`);
+    const career = [{
+      timeRange: '2014/07 ~ Now',
+      description: {
+        url: 'http://freewheel.tv/',
+        label: 'FreeWheel Beijing Office'
+      }
+    }, {
+      timeRange: '2010/09 ~ 2014/06',
+      description: {
+        url: 'http://www.hit.edu.cn/',
+        label: 'Harbin Institute of Technology'
+      }
+    }];
 
-websitesEles.html(d => `
+
+
+    // websites container
+    const websitesContainerWidth = (bodyWidth - containerWidth) / 2 + 70;
+    const websitesContainer = leftContainer.append('div')
+      .attr('id', 'websites-container')
+      .style('width', `${websitesContainerWidth}px`);
+
+    // websites elements
+    const websitesEles = websitesContainer.selectAll('.websites-ele')
+      .data(websites)
+      .enter()
+      .append('div')
+      .attr('class', 'websites-ele')
+      .style('margin-left', `${websitesContainerWidth + 80}px`);
+
+    websitesEles.html(d =>
+      `
   <div>
     <img src="${d.favicon}" />
   </div>
@@ -299,71 +357,73 @@ websitesEles.html(d => `
     <a target="_blank" href="http://${d.url}">${d.url}</a>
     <p>,&nbsp;${d.label}</p>
   </div>
-`);
-  
-websitesEles.on('mouseover', function (d, i) {
-  select(this)
-    .transition()
-    .duration(500)
-    .style('margin-left', `${websitesContainerWidth - d.width}px`);
-}).on('mouseout', function () {
-  select(this)
-    .transition()
-    .duration(300)
-    .style('margin-left', `${websitesContainerWidth - 30}px`);
-});
- 
-websitesEles.transition()
-  .duration(1000)
-  .delay((d, i) => i * 200 + 600)
-  .style('margin-left', `${websitesContainerWidth - 30}px`);
+`
+    );
+
+    websitesEles.on('mouseover', function (d, i) {
+      select(this)
+        .transition()
+        .duration(500)
+        .style('margin-left', `${websitesContainerWidth - d.width}px`);
+    }).on('mouseout', function () {
+      select(this)
+        .transition()
+        .duration(300)
+        .style('margin-left', `${websitesContainerWidth - 30}px`);
+    });
+
+    websitesEles.transition()
+      .duration(1000)
+      .delay((d, i) => i * 200 + 600)
+      .style('margin-left', `${websitesContainerWidth - 30}px`);
 
 
 
-const skillsContainerHeight = containerHeight * 0.45;
-const skillsContainer = rightContainer.append('div')
-  .attr('id', 'skills-container')
-  .style('height', `${skillsContainerHeight}px`);
+    const skillsContainerHeight = containerHeight * 0.45;
+    const skillsContainer = rightContainer.append('div')
+      .attr('id', 'skills-container')
+      .style('height', `${skillsContainerHeight}px`);
 
-skillsContainer.style('opacity', 0)
-  .style('margin-left', '-300px')
-  .transition()
-  .duration(1000)
-  .style('opacity', 0.9)
-  .style('margin-left', '20px');
+    skillsContainer.style('opacity', 0)
+      .style('margin-left', '-300px')
+      .transition()
+      .duration(1000)
+      .style('opacity', 0.9)
+      .style('margin-left', '20px');
 
-skillsContainer.append('h2').text('Skill Set');
+    skillsContainer.append('h2').text('Skill Set');
 
-const skillsItemsContainer = skillsContainer.append('ul');
-skillsItemsContainer.selectAll('li')
-  .data(skills)
-  .enter()
-  .append('li')
-  .html(d => `
+    const skillsItemsContainer = skillsContainer.append('ul');
+    skillsItemsContainer.selectAll('li')
+      .data(skills)
+      .enter()
+      .append('li')
+      .html(d => `
     <p>${d.key}&nbsp:&nbsp;<p>
     <p class='skills-detail'>${d.value}</p>
   `);
 
-const careerContainerHeight = containerHeight / 2;
-const careerContainer = rightContainer.append('div')
-  .attr('id', 'career-container')
-  .style('height', `${careerContainerHeight}px`);
+    const careerContainerHeight = containerHeight / 2;
+    const careerContainer = rightContainer.append('div')
+      .attr('id', 'career-container')
+      .style('height', `${careerContainerHeight}px`);
 
-careerContainer.style('opacity', 0)
-  .style('margin-left', '-300px')
-  .transition()
-  .duration(1000)
-  .style('opacity', 0.9)
-  .style('margin-left', '20px');
+    careerContainer.style('opacity', 0)
+      .style('margin-left', '-300px')
+      .transition()
+      .duration(1000)
+      .style('opacity', 0.9)
+      .style('margin-left', '20px');
 
-careerContainer.append('h2').text('Career');
+    careerContainer.append('h2').text('Career');
 
-const careerItemsContainer = careerContainer.append('ul');
-careerItemsContainer.selectAll('li')
-  .data(career)
-  .enter()
-  .append('li')
-  .html(d => `
+    const careerItemsContainer = careerContainer.append('ul');
+    careerItemsContainer.selectAll('li')
+      .data(career)
+      .enter()
+      .append('li')
+      .html(d =>
+        `
     <p>${d.timeRange}&nbsp;:&nbsp;</p>
     <a
       class='career-detail'
@@ -372,8 +432,9 @@ careerItemsContainer.selectAll('li')
     >
       ${d.description.label}
     </a>
-  `);
+  `
+      );
+  </script>
+</body>
 
-    </script>
-  </body>
 </html>

@@ -2,7 +2,7 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: #34495e;
+  background-color: #393E46;
 }
 
 a {
@@ -29,18 +29,22 @@ a {
   height: 40px;
   padding: 0 40px;
 }
+
 .visible:before {
   content: '[';
   left: 0;
   line-height: 40px;
 }
+
 .visible:after {
   content: ']';
   position: absolute;
   right: 0;
   line-height: 40px;
 }
-.visible:after, .visible:before {
+
+.visible:after,
+.visible:before {
   position: absolute;
   top: 0;
   color: #16a085;
@@ -67,7 +71,8 @@ ul.honor li {
 }
 
 @keyframes opacity {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
   }
   50% {
@@ -76,18 +81,44 @@ ul.honor li {
 }
 
 @keyframes change {
-  0%, 20%, 100% {
+  0%,
+  20%,
+  100% {
     transform: translateY(-33.7%);
   }
-  25%,45% {
+  25%,
+  45% {
     transform: translateY(-67%);
   }
-  50%,70% {
+  50%,
+  70% {
     transform: translateY(-100%);
   }
-  75%,95% {
+  75%,
+  95% {
     transform: translateY(-67%);
   }
+}
+
+.icons {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+.icons ul {
+  margin: 0 0 0 -20px;
+}
+
+.icons a {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 25px;
+  letter-spacing: 20px;
+}
+
+.icons li {
+  display: inline-block;
 }
 
 #detail {
@@ -125,12 +156,12 @@ ul.honor li {
   width: 700px;
   height: 30px;
   padding: 3px 4px 3px 5px;
-  background-color: #c4c9cc;
+  background-color: #E6E6E6;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px
 }
 
-.websites-ele > div {
+.websites-ele>div {
   display: inline-block;
   vertical-align: top;
 }
@@ -153,7 +184,7 @@ ul.honor li {
   color: #666666;
 }
 
-#skills-container  {
+#skills-container {
   width: 700px;
   margin-left: 20px;
 }
@@ -175,5 +206,5 @@ ul.honor li {
 }
 
 #career-container .career-detail {
-  color: #cee6e9;
+  color: #00ADB5;
 }

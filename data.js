@@ -27,7 +27,7 @@ const websites = [{
 
 const skills = [{
   key   : 'Languages',
-  value : 'Ruby, JavaScript, Go, a little C++ & Scala',
+  value : 'JavaScript, Go, Ruby, a little C++ & Scala',
 }, {
   key   : 'Framework / Lib',
   value : 'RoR, Go web service, Node.js full stack'
