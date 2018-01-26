@@ -7,16 +7,19 @@ export const global = {
   '*' : {
     margin     : 0,
     padding    : 0,
-    fontFamily : '\'Roboto\', sans-serif'
+    fontFamily : '\'Lucida Sans Unicode\',\'Lucida Grande\',sans-serif'
   },
 
   a : {
     textDecoration : 'none'
+  },
+
+  li : {
+    listStyleType : 'none'
   }
 };
 
 const panel = {
-  position      : 'relative',
   display       : 'inline-block',
   verticalAlign : 'top',
   height        : '100%'
@@ -24,8 +27,8 @@ const panel = {
 
 export const leftPanel = {
   ...panel,
-  width           : '36%',
-  backgroundColor : '#393E46'
+  width    : '36%',
+  overflow : 'hidden'
 };
 
 export const rightPanel = {

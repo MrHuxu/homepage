@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Radium, { Style } from 'radium';
 
+import LeftPanel from './left-panel';
+import RightPanel from './right-panel';
+
 import { global, leftPanel, rightPanel } from '../styles/app';
 
 @Radium
@@ -11,11 +14,11 @@ class App extends Component {
         <Style rules={ global } />
 
         <div style={ leftPanel }>
-          left
+          <LeftPanel />
         </div>
 
         <div style={ rightPanel }>
-          right
+          <RightPanel />
         </div>
       </div>
     );
