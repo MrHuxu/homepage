@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Radium, { Style } from 'radium';
 
-import { links, websites } from '../data';
+import { links, websites, skills } from '../data';
 
-import { global, container, title, websites as websitesStyle, icons } from '../styles/left-panel';
+import { global, container, title, websites as websitesStyle, skills as skillsStyle, icons } from '../styles/left-panel';
 
 @Radium
 class LeftPanel extends Component {
@@ -42,6 +42,23 @@ class LeftPanel extends Component {
                     { site.url }
                   </a>
                   <p style={ liStyle.container.p }>,&nbsp;{ site.label }</p>
+                </div>
+              </li>
+            );
+          }
+          ) }
+        </ul>
+
+        <ul style={ skillsStyle }>
+          { skills.map(skill => {
+            const liStyle = skillsStyle.li(skill.level);
+            const { progress } = liStyle;
+            return (
+              <li key={ skill.name } style={ liStyle }>
+                <p style={ liStyle.p }>{ skill.name }</p>
+                <div style={ progress }>
+                  <i className="fa fa-circle" style={ progress.icon } />
+                  <div style={ progress.done } />
                 </div>
               </li>
             );

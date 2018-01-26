@@ -89,6 +89,40 @@ export const websites = {
   })
 };
 
+export const skills = {
+  textAlign : 'right',
+  float     : 'right',
+
+  li : level => ({
+    margin : '16px 0',
+
+    p : {
+      margin : '0 12px 0 0'
+    },
+
+    progress : {
+      position        : 'relative',
+      width           : '480px',
+      height          : '2px',
+      margin          : '5px 0 0 0',
+      backgroundColor : 'rgba(255, 255, 255, 0.19)',
+
+      icon : {
+        position : 'absolute',
+        top      : '-8px',
+        left     : `${100 - level}%`
+      },
+
+      done : {
+        margin          : `0 0 0 ${100 - level}%`,
+        width           : `${level}%`,
+        height          : '2px',
+        backgroundColor : '#78909C'
+      }
+    }
+  })
+};
+
 export const icons = {
   position : 'absolute',
   right    : '30px',

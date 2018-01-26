@@ -35,7 +35,13 @@ export const websites = [{
 }];
 
 export const skills = [{
-  name  : 'HTML & CSS',
+  name  : 'Go',
+  level : '73'
+}, {
+  name  : 'Docker',
+  level : '50'
+}, {
+  name  : 'Ruby on Rails',
   level : '60'
 }, {
   name  : 'React.js & Redux',
@@ -44,14 +50,8 @@ export const skills = [{
   name  : 'Node.js',
   level : '70'
 }, {
-  name  : 'Ruby on Rails',
+  name  : 'HTML & CSS',
   level : '60'
-}, {
-  name  : 'Go',
-  level : '73'
-}, {
-  name  : 'Docker',
-  level : '50'
 }];
 
 export const contact = {
