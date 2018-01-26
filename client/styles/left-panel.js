@@ -20,12 +20,12 @@ const titleCommon = {
   position   : 'absolute'
 };
 
-let pulseKeyframes = keyframes({
+const titleKeyframes = keyframes({
   '0%, 20%, 100%' : { top: '0' },
   '25%, 45%'      : { top: '-40px' },
   '50%, 70%'      : { top: '-80px' },
   '75%, 95%'      : { top: '-40px' }
-}, 'pulse');
+}, 'title');
 
 export const title = {
   position : 'absolute',
@@ -52,7 +52,7 @@ export const title = {
       right         : '0',
       textAlign     : 'right',
       animation     : '10s linear 0s normal none infinite',
-      animationName : pulseKeyframes
+      animationName : titleKeyframes
     }
   }
 };
