@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Radium, { Style } from 'radium';
 
-const App = () => (
-  <h1>
-    Homepage of xhu
-  </h1>
-);
+import { global, leftPanel, rightPanel } from '../styles/app';
 
-export default (App);
+@Radium
+class App extends Component {
+  render () {
+    return (
+      <div>
+        <Style rules={ global } />
+
+        <div style={ leftPanel }>
+          left
+        </div>
+
+        <div style={ rightPanel }>
+          right
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;
