@@ -14,9 +14,6 @@ class LeftPanel extends Component {
 
         <div style={ title }>
           <div style={ title.container }>
-            <div style={ title.container.prefix }>
-              xhu &nbsp;-
-            </div>
             <div style={ title.container.postfix }>
               Programmer<br />
               Web Developer<br />
@@ -26,6 +23,7 @@ class LeftPanel extends Component {
         </div>
 
         <ul style={ websitesStyle }>
+          <h4 style={ websitesStyle.title }> /* Websites */ </h4>
           { websites.map(site => {
             const liStyle = websitesStyle.li(site.width);
             return (
@@ -50,6 +48,7 @@ class LeftPanel extends Component {
         </ul>
 
         <ul style={ skillsStyle }>
+          <h4 style={ skillsStyle.title }> /* Skills */ </h4>
           { skills.map(skill => {
             const liStyle = skillsStyle.li(skill.level);
             const { progress } = liStyle;

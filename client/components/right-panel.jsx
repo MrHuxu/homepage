@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Radium, { Style } from 'radium';
 
-import { global, container } from '../styles/right-panel';
+import { global, container, title } from '../styles/right-panel';
 
 @Radium
 class RightPanel extends Component {
@@ -9,7 +9,14 @@ class RightPanel extends Component {
     return (
       <div className="right-panel" style={ container }>
         <Style rules={ global } />
-        Right panel
+
+        <div style={ title }>
+          <div style={ title.container }>
+            <div style={ title.container.prefix }>
+              xhu
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
