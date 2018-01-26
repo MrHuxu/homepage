@@ -1,5 +1,5 @@
 {
-  "name": "react-go-boilerplate",
+  "name": "homepage",
   "version": "0.0.1",
   "description": "",
   "main": "main.go",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MrHuxu/react-go-boilerplate.git"
+    "url": "git+https://github.com/MrHuxu/homepage.git"
   },
   "keywords": [
     "react",
@@ -25,9 +25,9 @@
   "author": "MrHuxu hxtheone@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MrHuxu/react-go-boilerplate/issues"
+    "url": "https://github.com/MrHuxu/homepage/issues"
   },
-  "homepage": "https://github.com/MrHuxu/react-go-boilerplate#readme",
+  "homepage": "https://github.com/MrHuxu/homepage#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

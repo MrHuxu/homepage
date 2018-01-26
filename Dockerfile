@@ -13,9 +13,9 @@ RUN apt-get update -y && \
 RUN mkdir /nodejs && curl http://nodejs.org/dist/v${NODE_VER}/node-v${NODE_VER}-linux-x64.tar.gz | tar xvzf - -C /nodejs --strip-components=1
 ENV PATH $PATH:/nodejs/bin
 
-WORKDIR /go/src/github.com/MrHuxu/react-go-boilerplate
+WORKDIR /go/src/github.com/MrHuxu/homepage
 
-COPY . /go/src/github.com/MrHuxu/react-go-boilerplate
+COPY . /go/src/github.com/MrHuxu/homepage
 RUN npm install && npm run webpack
 RUN go build main.go
 
