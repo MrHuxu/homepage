@@ -61,7 +61,7 @@ export const websites = {
   margin : '0 0 0 100%',
 
   title : {
-    margin : '0 0 20px -118px',
+    margin : '0 0 22px -118px',
     color  : '#777'
   },
 
@@ -100,7 +100,7 @@ export const skills = {
   margin    : '20px 0 0 0',
 
   title : {
-    margin : '0 9px 20px 0',
+    margin : '0 9px 18px 0',
     color  : '#777'
   },
 
