@@ -10,7 +10,7 @@
     "dev-server": "gin --port 8283 --appPort 11011 run main.go",
     "build-frontend": "./node_modules/webpack/bin/webpack.js --config webpack.config.prd.js",
     "build-backend": "go build main.go",
-    "build":"npm run build-frontend && npm run build-backend",
+    "build": "npm run build-frontend && npm run build-backend",
     "dev": "node ./scripts/dev-server",
     "prd": "npm run build && GIN_MODE=release ./main",
     "deploy": "npm run build && sudo supervisorctl reload"
@@ -19,11 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/MrHuxu/homepage.git"
   },
-  "keywords": [
-    "react",
-    "go",
-    "boilerplate"
-  ],
+  "keywords": ["homepage"],
   "author": "MrHuxu hxtheone@gmail.com",
   "license": "MIT",
   "bugs": {

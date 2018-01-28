@@ -3,6 +3,10 @@ import { keyframes } from 'radium';
 export const global = {
   '.left-panel *' : {
     color : '#ECF0F1'
+  },
+
+  '.left-panel li' : {
+    listStyleType : 'none'
   }
 };
 
@@ -61,7 +65,7 @@ export const websites = {
   margin : '0 0 0 100%',
 
   title : {
-    margin : '0 0 22px -118px',
+    margin : '0 0 22px -130px',
     color  : '#777'
   },
 
@@ -100,7 +104,7 @@ export const skills = {
   margin    : '20px 0 0 0',
 
   title : {
-    margin : '0 9px 18px 0',
+    margin : '0 21px 18px 0',
     color  : '#777'
   },
 
@@ -116,7 +120,7 @@ export const skills = {
       width           : '480px',
       height          : '2px',
       margin          : '5px 0 0 0',
-      backgroundColor : 'rgba(255, 255, 255, 0.19)',
+      backgroundColor : 'rgba(255, 255, 255, 0)',
 
       icon : {
         position : 'absolute',

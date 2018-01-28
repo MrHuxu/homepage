@@ -7,15 +7,12 @@ export const global = {
   '*' : {
     margin     : 0,
     padding    : 0,
-    fontFamily : '\'Lucida Sans Unicode\',\'Lucida Grande\',sans-serif'
+    fontFamily : '\'Lucida Sans Unicode\',\'Lucida Grande\',sans-serif',
+    fontSize   : '16px'
   },
 
   a : {
     textDecoration : 'none'
-  },
-
-  li : {
-    listStyleType : 'none'
   }
 };
 
