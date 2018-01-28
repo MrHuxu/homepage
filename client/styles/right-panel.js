@@ -2,53 +2,58 @@ import { title as leftTitle } from './left-panel';
 
 export const global = {
   '.right-panel *' : {
-    color : '#393E46'
+    color : '#929292'
   }
 };
 
 export const container = {
-  position        : 'relative',
-  width           : '100%',
-  height          : '100%',
-  padding         : '180px 0 0 20px',
-  backgroundColor : '#ECF0F1'
+  position : 'relative',
+  width    : '100%',
+  padding  : '0 0 0 2em'
 };
 
 export const title = {
   ...leftTitle,
+  margin   : '5em 0 0 0',
+  position : 'unset',
 
   container : {
     ...leftTitle.container,
 
     prefix : {
       ...leftTitle.container.prefix,
-      left : '40px'
+      color : '#393E46',
+      left  : '0'
     }
   }
 };
 
 const subModuleTitle = {
-  color : '#999'
+  color : '#AAA'
 };
 
 export const education = {
   title : {
-    ...subModuleTitle
+    ...subModuleTitle,
+    margin : '4em 0 0 0'
   },
 
   container : {
-    padding : '20px',
+    padding : '2em',
 
     timeRange : {
-      display : 'inline-block',
-      color   : '#fba77a'
+      display  : 'inline-block',
+      color    : '#FBA77A',
+      fontSize : '1.3em'
     },
 
     website : {
+      fontSize : '1.3em'
     },
 
     description : {
-      display : 'inline-block'
+      display  : 'inline-block',
+      fontSize : '1.3em'
     }
   }
 };
@@ -59,18 +64,21 @@ export const career = {
   },
 
   container : {
-    padding : '20px',
+    padding : '2em',
 
     timeRange : {
-      display : 'inline-block',
-      color   : '#fBA77A'
+      display  : 'inline-block',
+      color    : '#FBA77A',
+      fontSize : '1.3em'
     },
 
     website : {
+      fontSize : '1.3em'
     },
 
     description : {
-      display : 'inline-block'
+      display  : 'inline-block',
+      fontSize : '1.3em'
     }
   }
 };
@@ -81,17 +89,20 @@ export const open = {
   },
 
   container : {
-    padding : '20px',
+    padding : '2em',
 
     item : {
       margin : '0 0 15px 0',
 
       website : {
-        color : '#00ADB5'
+        color    : '#00ADB5',
+        margin   : '0 0.5em 0 0',
+        fontSize : '1.3em'
       },
 
       description : {
-        display : 'inline-block'
+        display  : 'inline-block',
+        fontSize : '1.3em'
       }
     }
   }
@@ -103,17 +114,28 @@ export const work = {
   },
 
   container : {
-    padding : '20px',
+    padding : '2em',
 
-    name : {
-      display : 'inline-block'
-    },
+    item : {
+      margin : '0 0 15px 0',
 
-    techStack : {
-      display : 'inline-block'
-    },
+      name : {
+        display  : 'inline-block',
+        color    : '#5D8994',
+        margin   : '0 0.4em 0 0',
+        fontSize : '1.3em'
+      },
 
-    description : {
+      techStack : {
+        display  : 'inline-block',
+        color    : '#F8C2CE',
+        fontSize : '1.1em'
+      },
+
+      description : {
+        margin   : '0.2em 0 0 0',
+        fontSize : '1.2em'
+      }
     }
   }
 };

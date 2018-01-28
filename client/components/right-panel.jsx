@@ -51,8 +51,8 @@ class RightPanel extends Component {
             <li key={ c.timeRange }>
               <div style={ careerStyle.container.timeRange }> { c.timeRange } </div>
               ,&nbsp;
-              <div style={ careerStyle.container.description }> { c.description.title } </div>
-              <a style={ careerStyle.container.website }href={ c.description.url }> at { c.description.label } </a>
+              <div style={ careerStyle.container.description }> { c.description.title } at </div>
+              <a style={ careerStyle.container.website }href={ c.description.url }> { c.description.label } </a>
             </li>
           )) }
         </ul>
@@ -77,10 +77,10 @@ class RightPanel extends Component {
         <h4 style={ workStyle.title }> /* Projects */</h4>
         <ul style={ workStyle.container }>
           { work.map(w => (
-            <li key={ w.name }>
-              <div style={ workStyle.container.name }> { w.name } </div>
-              <div style={ workStyle.container.techStack }> { w.techStack.join(' · ') } </div>
-              <div style={ workStyle.container.description }> { w.description.label } </div>
+            <li key={ w.name } style={ workStyle.container.item }>
+              <div style={ workStyle.container.item.name }> { w.name } </div>
+              <div style={ workStyle.container.item.techStack }> { w.techStack.join(' · ') } </div>
+              <div style={ workStyle.container.item.description }> { w.description.label } </div>
             </li>
           )
           ) }

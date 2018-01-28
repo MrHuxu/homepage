@@ -11,11 +11,10 @@ export const global = {
 };
 
 export const container = {
-  position        : 'relative',
-  width           : '100%',
-  height          : '100%',
-  padding         : '180px 0 0 0',
-  backgroundColor : '#393E46'
+  position : 'relative',
+  width    : '100%',
+  height   : '100%',
+  padding  : '180px 0 0 0'
 };
 
 const titleCommon = {

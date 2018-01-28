@@ -24,12 +24,14 @@ const panel = {
 
 export const leftPanel = {
   ...panel,
-  width    : '36%',
-  overflow : 'hidden'
+  width           : '36%',
+  overflow        : 'hidden',
+  backgroundColor : '#393E46'
 };
 
 export const rightPanel = {
   ...panel,
-  width    : '64%',
-  overflow : 'auto'
+  width           : '64%',
+  overflow        : 'auto',
+  backgroundColor : '#ECF0F1'
 };
