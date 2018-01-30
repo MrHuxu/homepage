@@ -6,7 +6,7 @@ export const global = {
 
 export const container = {
   position        : 'relative',
-  padding         : '6em 2em 2em 2em',
+  padding         : '6em 2em',
   backgroundColor : '#ECF0F1'
 };
 
