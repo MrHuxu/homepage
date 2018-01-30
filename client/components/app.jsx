@@ -4,13 +4,13 @@ import Radium, { Style } from 'radium';
 import LeftPanel from './left-panel';
 import RightPanel from './right-panel';
 
-import { global, leftPanel, rightPanel } from '../styles/app';
+import { global, body, leftPanel, rightPanel } from '../styles/app';
 
 @Radium
 class App extends Component {
   render () {
     return (
-      <div>
+      <div style={ body }>
         <Style rules={ global } />
 
         <div style={ leftPanel }>

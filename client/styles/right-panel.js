@@ -1,4 +1,4 @@
-import { title as leftTitle } from './left-panel';
+import { titleCommon } from './left-panel';
 
 export const global = {
   '.right-panel *' : {
@@ -7,25 +7,17 @@ export const global = {
 };
 
 export const container = {
-  position : 'relative',
-  width    : '100%',
-  padding  : '0 0 0 2em'
+  position        : 'relative',
+  width           : '100%',
+  padding         : '4em 2em 2em 2em',
+  backgroundColor : '#ECF0F1'
 };
 
 export const title = {
-  ...leftTitle,
-  margin   : '5em 0 0 0',
+  ...titleCommon,
   position : 'unset',
-
-  container : {
-    ...leftTitle.container,
-
-    prefix : {
-      ...leftTitle.container.prefix,
-      color : '#393E46',
-      left  : '0'
-    }
-  }
+  color    : '#393E46',
+  left     : '0'
 };
 
 const subModuleTitle = {
@@ -138,4 +130,40 @@ export const work = {
       }
     }
   }
+};
+
+export const websites = {
+  title : {
+    ...subModuleTitle,
+    margin : '0 0 1.1em 0'
+  },
+
+  li : width => ({
+    display         : 'inline-block',
+    width           : `${width}em`,
+    padding         : '0.5em 0.5em',
+    backgroundColor : '#E6E6E6',
+    borderRadius    : '0.5em',
+    margin          : '10px',
+
+    container : {
+      display : 'inline-block',
+
+      img : {
+        width  : '1.4em',
+        height : '1.4em',
+        margin : '0 0.5em -0.35em 0'
+      },
+
+      a : {
+        color    : '#0079BF',
+        fontSize : '1.2em'
+      },
+
+      p : {
+        display  : 'inline',
+        fontSize : '1.2em'
+      }
+    }
+  })
 };

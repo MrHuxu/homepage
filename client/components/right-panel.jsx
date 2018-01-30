@@ -6,10 +6,11 @@ import {
   education as educationStyle,
   career as careerStyle,
   open as openStyle,
-  work as workStyle
+  work as workStyle,
+  websites as websitesStyle
 } from '../styles/right-panel';
 
-import { education, career, projects } from '../data';
+import { education, career, projects, websites } from '../data';
 const { open, work } = projects;
 
 @Radium
@@ -20,11 +21,7 @@ class RightPanel extends Component {
         <Style rules={ global } />
 
         <div style={ title }>
-          <div style={ title.container }>
-            <div style={ title.container.prefix }>
-              xhu
-            </div>
-          </div>
+          xhu
         </div>
 
         <h4 style={ educationStyle.title }> /* Education */ </h4>
@@ -57,23 +54,6 @@ class RightPanel extends Component {
           )) }
         </ul>
 
-        <h4 style={ openStyle.title }> /* Open-source Contributions */ </h4>
-        <ul style={ openStyle.container }>
-          { open.map(o => (
-            <li key={ o.label } style={ openStyle.container.item }>
-              <a
-                style={ openStyle.container.item.website }
-                target="_blank"
-                href={ o.url }
-              >
-                { o.label }
-              </a>
-              <div style={ openStyle.container.item.description }> { o.description } </div>
-            </li>
-          )
-          ) }
-        </ul>
-
         <h4 style={ workStyle.title }> /* Projects */</h4>
         <ul style={ workStyle.container }>
           { work.map(w => (
@@ -85,6 +65,53 @@ class RightPanel extends Component {
           )
           ) }
         </ul>
+
+        <h4 style={ openStyle.title }> /* Open-source Contributions */ </h4>
+        <ul style={ openStyle.container }>
+          { open.map(o => (
+            <li key={ o.label } style={ openStyle.container.item }>
+              <a
+                style={ openStyle.container.item.website }
+                target="_blank"
+                href={ o.url }
+              >
+                { o.label }
+              </a>
+            </li>
+          )
+          ) }
+          <li key="etc" style={ openStyle.container.item }>
+            <a style={ openStyle.container.item.website }>
+              etc.
+            </a>
+          </li>
+        </ul>
+
+        <ul style={ websitesStyle }>
+          <h4 style={ websitesStyle.title }> /* Websites */ </h4>
+          { websites.map(site => {
+            const liStyle = websitesStyle.li(site.width);
+            return (
+              <li style={ liStyle } key={ site.url }>
+                <div style={ liStyle.container }>
+                  <img src={ site.favicon } style={ liStyle.container.img } />
+                </div>
+                <div style={ liStyle.container }>
+                  <a
+                    style={ liStyle.container.a }
+                    target="_blank"
+                    href={ `http://${site.url}` }
+                  >
+                    { site.url }
+                  </a>
+                  <p style={ liStyle.container.p }>,&nbsp;{ site.label }</p>
+                </div>
+              </li>
+            );
+          }
+          ) }
+        </ul>
+
       </div>
     );
   }

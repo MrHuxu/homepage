@@ -11,27 +11,27 @@ export const websites = [{
   favicon : 'http://blog.xhu.me/assets/images/x-billabong.png',
   url     : 'blog.xhu.me',
   label   : 'My blog',
-  width   : 215
-}, {
-  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/yrel/favicon.png',
-  url     : 'yrel.xhu.me',
-  label   : 'A script language written in Go',
-  width   : 390
-}, {
-  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/bar/favicon.png',
-  url     : 'bar.xhu.me',
-  label   : 'A place to store thoughts',
-  width   : 340
+  width   : 15
 }, {
   favicon : 'http://h.xhu.me/favicon.ico',
   url     : 'h.xhu.me',
   label   : 'Little CMS',
-  width   : 205
+  width   : 15
+}, {
+  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/yrel/favicon.png',
+  url     : 'yrel.xhu.me',
+  label   : 'A script language written in Go',
+  width   : 28
+}, {
+  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/bar/favicon.png',
+  url     : 'bar.xhu.me',
+  label   : 'A place to store thoughts',
+  width   : 25
 }, {
   favicon : 'https://raw.githubusercontent.com/MrHuxu/MySnippets/master/vendor/icon/logo.ico',
   url     : 'snippets.xhu.me',
   label   : 'Snippets manager',
-  width   : 325
+  width   : 23
 }];
 
 export const skills = [{

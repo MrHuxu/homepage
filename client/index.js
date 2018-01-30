@@ -1,3 +1,5 @@
+import './styles/app.css';
+
 import React from 'react';
 import { render } from 'react-dom';
 import { StyleRoot } from 'radium';

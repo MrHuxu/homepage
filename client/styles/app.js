@@ -7,8 +7,7 @@ export const global = {
   '*' : {
     margin     : 0,
     padding    : 0,
-    fontFamily : '\'Lucida Sans Unicode\',\'Lucida Grande\',sans-serif',
-    fontSize   : '16px'
+    fontFamily : '\'Lucida Sans Unicode\',\'Lucida Grande\',sans-serif'
   },
 
   a : {
@@ -19,7 +18,11 @@ export const global = {
 const panel = {
   display       : 'inline-block',
   verticalAlign : 'top',
-  height        : '100%'
+  height        : '100%',
+
+  '@media (max-width: 680px)' : {
+    width : '100%'
+  }
 };
 
 export const leftPanel = {
@@ -31,7 +34,9 @@ export const leftPanel = {
 
 export const rightPanel = {
   ...panel,
-  width           : '64%',
-  overflow        : 'auto',
-  backgroundColor : '#ECF0F1'
+  width : '64%',
+
+  '@media (min-width: 680px)' : {
+    overflow : 'auto'
+  }
 };

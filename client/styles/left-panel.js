@@ -14,42 +14,30 @@ export const container = {
   position : 'relative',
   width    : '100%',
   height   : '100%',
-  padding  : '180px 0 0 0'
+  padding  : '4em 0 0 0'
 };
 
-const titleCommon = {
-  fontSize   : '35px',
-  lineHeight : '40px',
+export const titleCommon = {
+  fontSize   : '2.5em',
+  lineHeight : '1.3em',
   position   : 'absolute'
 };
 
 const titleKeyframes = keyframes({
   '0%, 20%, 100%' : { top: '0' },
-  '25%, 45%'      : { top: '-40px' },
-  '50%, 70%'      : { top: '-80px' },
-  '75%, 95%'      : { top: '-40px' }
+  '25%, 45%'      : { top: '-1.3em' },
+  '50%, 70%'      : { top: '-2.6em' },
+  '75%, 95%'      : { top: '-1.3em' }
 }, 'title');
 
 export const title = {
-  position : 'absolute',
-  top      : '80px',
-  right    : '20px',
-  width    : '100%',
-
   container : {
     position : 'relative',
     width    : '100%',
-    height   : '40px',
+    height   : '3.3em',
     overflow : 'hidden',
 
-    prefix : {
-      ...titleCommon,
-      top   : '-1px',
-      width : '120px',
-      right : '260px'
-    },
-
-    postfix : {
+    label : {
       ...titleCommon,
       width         : '260px',
       right         : '0',
@@ -60,47 +48,12 @@ export const title = {
   }
 };
 
-export const websites = {
-  margin : '0 0 0 100%',
-
-  title : {
-    margin : '0 0 22px -130px',
-    color  : '#777'
-  },
-
-  li : width => ({
-    width                  : `${width}px`,
-    padding                : '6px 4px 6px 8px',
-    backgroundColor        : '#E6E6E6',
-    borderTopLeftRadius    : '8px',
-    borderBottomLeftRadius : '8px',
-    margin                 : `0 0 16px -${width}px`,
-
-    container : {
-      display : 'inline-block',
-
-      img : {
-        width  : '20px',
-        height : '20px',
-        margin : '0 7px -5px 0'
-      },
-
-      a : {
-        color : '#0079BF'
-      },
-
-      p : {
-        display : 'inline',
-        color   : '#666'
-      }
-    }
-  })
-};
-
 export const skills = {
+  position  : 'absolute',
   textAlign : 'right',
   float     : 'right',
-  margin    : '20px 0 0 0',
+  right     : '0',
+  bottom    : '15em',
 
   title : {
     margin : '0 21px 18px 0',
@@ -139,15 +92,15 @@ export const skills = {
 
 export const icons = {
   position : 'absolute',
-  right    : '30px',
-  bottom   : '240px',
+  right    : '2em',
+  bottom   : '7em',
 
   li : {
     display : 'inline-block',
     margin  : '0 0 0 15px',
 
     a : {
-      fontSize : '35',
+      fontSize : '2em',
       color    : 'rgba(255,255,255,0.4)'
     }
   }
