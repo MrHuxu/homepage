@@ -1,0 +1,15 @@
+.DS_Store
+
+main
+debug
+gin-bin
+log/
+vendor/
+
+.sass-cache
+npm-debug.log
+package-lock.json
+node_modules/
+server/public
+
+dump.rdb
