@@ -109,7 +109,8 @@ export const projects = {
     name        : 'Workflow Service',
     techStack   : ['Go', 'gRPC'],
     description : {
-      label    : '为公司业务提供流程控制的基础服务组件',
+      // label    : '为公司业务提供流程控制的基础服务组件',
+      label    : 'A basic service which provides the workflow control to business entities',
       features : [
         '独立完成项目的技术 design, 注重与服务之间的解耦, 并且适当暴露接口以便于优化和扩展.',
         '代码采用清晰的分层结构, 下层方法通过接口被上层调用, 适当解耦的同时也便于编写单元测试.',
@@ -121,7 +122,8 @@ export const projects = {
     name        : 'HyLDA',
     techStack   : ['Ruby on Rails', 'jQuery', 'Redis', 'MySQL'],
     description : {
-      label    : '线性广告和数字广告混合投放系统的 UI 部分.',
+      // label    : '线性广告和数字广告混合投放系统的 UI 部分.',
+      label    : 'Building both the back-end & front-end of the UI part of HyLDA Project',
       features : {
         '性能问题' : [
           '采用 Activerecord 中的 eager load 操作避免了加载数据时可能出现的 n+1 问题.',
@@ -138,7 +140,8 @@ export const projects = {
     name        : 'SparkUI Adoption',
     techStack   : ['React.js', 'Redux'],
     description : {
-      label    : '带领一个团队使用内部的 SparkUI 框架对 HyLDA 模块进行完整的前端替换.',
+      // label    : '带领一个团队使用内部的 SparkUI 框架对 HyLDA 模块进行完整的前端替换.',
+      label    : 'Leading a team to adopt SparkUI(an internal front-end framework) to the UI of HyLDA project',
       features : {
         '项目设计' : [
           '项目初期进行详细的 design, 特别是和后端的 API 设计, 在保证功能的情况下尽可能使用统一格式, 方便今后的后端升级.',
@@ -156,7 +159,8 @@ export const projects = {
     name        : 'Bug Bash Tool',
     techStack   : ['Ruby on Rails', 'React.js', 'Redux', 'Express.js', 'Go', 'MongoDB'],
     description : {
-      label    : '内部的一个统计特定 Jira ticket 的工具.',
+      // label    : '内部的一个统计特定 Jira ticket 的工具.',
+      label    : 'An internal tool which can collect specific Jira tickets and visualize the result',
       features : [
         '初始版本使用 Ruby on Rails 和 React.js 实现了完整的前后端分离开发.',
         '将后端使用 Node.js 进行了重写, 实现数据的并行获取, 了解了 ES6 原生的 Promise 规范, 并对前端代码进行了部分重构.',

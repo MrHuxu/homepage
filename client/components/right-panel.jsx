@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import Radium, { Style } from 'radium';
 
 import {
-  global, container, title,
+  global, container, divider,
   education as educationStyle,
   career as careerStyle,
+  skills as skillsStyle,
   open as openStyle,
   work as workStyle,
   websites as websitesStyle
 } from '../styles/right-panel';
 
-import { education, career, projects, websites } from '../data';
+import { education, career, skills, projects, websites } from '../data';
 const { open, work } = projects;
 
 @Radium
@@ -20,41 +21,69 @@ class RightPanel extends Component {
       <div className="right-panel" style={ container }>
         <Style rules={ global } />
 
-        <div style={ title }>
-          xhu
-        </div>
-
-        <h4 style={ educationStyle.title }> /* Education */ </h4>
+        <h4 style={ educationStyle.title }> Education </h4>
         <ul style={ educationStyle.container }>
           { education.map(e => (
             <li key={ e.timeRange }>
               <div style={ educationStyle.container.timeRange }> { e.timeRange } </div>
               ,&nbsp;
+              <div style={ educationStyle.container.description }> { e.description.title } at&nbsp;</div>
               <a
+                target="_blank"
                 style={ educationStyle.container.website }
                 href={ e.description.url }
               >
                 { e.description.label }
               </a>
-              ,&nbsp;
-              <div style={ educationStyle.container.description }> { e.description.title } </div>
+
             </li>
           )) }
         </ul>
 
-        <h4 style={ careerStyle.title }> /* Career */ </h4>
+        <div style={ divider } />
+
+        <h4 style={ careerStyle.title }> Career </h4>
         <ul style={ careerStyle.container }>
           { career.map(c => (
             <li key={ c.timeRange }>
               <div style={ careerStyle.container.timeRange }> { c.timeRange } </div>
               ,&nbsp;
-              <div style={ careerStyle.container.description }> { c.description.title } at </div>
-              <a style={ careerStyle.container.website }href={ c.description.url }> { c.description.label } </a>
+              <div style={ careerStyle.container.description }> { c.description.title } at&nbsp;</div>
+              <a
+                target="_blank"
+                style={ careerStyle.container.website }
+                href={ c.description.url }
+              >
+                { c.description.label }
+              </a>
             </li>
           )) }
         </ul>
 
-        <h4 style={ workStyle.title }> /* Projects */</h4>
+        <div style={ divider } />
+
+        <h4 style={ skillsStyle.title }> Skills </h4>
+        <ul style={ skillsStyle.container }>
+          { skills.map(skill => {
+            const liStyle = skillsStyle.container.li(skill.level);
+            return (
+              <li key={ skill.name } style={ liStyle }>
+                <div style={ liStyle.container }>
+                  <div style={ liStyle.container.p }>{ skill.name }</div>
+                  <div style={ liStyle.container.done } />
+                  <div>
+                    <i className="fa fa-circle" style={ liStyle.container.icon } />
+                  </div>
+                </div>
+              </li>
+            );
+          }
+          ) }
+        </ul>
+
+        <div style={ divider } />
+
+        <h4 style={ workStyle.title }> Projects</h4>
         <ul style={ workStyle.container }>
           { work.map(w => (
             <li key={ w.name } style={ workStyle.container.item }>
@@ -66,7 +95,9 @@ class RightPanel extends Component {
           ) }
         </ul>
 
-        <h4 style={ openStyle.title }> /* Open-source Contributions */ </h4>
+        <div style={ divider } />
+
+        <h4 style={ openStyle.title }> Open-source Contributions </h4>
         <ul style={ openStyle.container }>
           { open.map(o => (
             <li key={ o.label } style={ openStyle.container.item }>
@@ -87,8 +118,10 @@ class RightPanel extends Component {
           </li>
         </ul>
 
+        <div style={ divider } />
+
         <ul style={ websitesStyle }>
-          <h4 style={ websitesStyle.title }> /* Websites */ </h4>
+          <h4 style={ websitesStyle.title }> Websites </h4>
           { websites.map(site => {
             const liStyle = websitesStyle.li(site.width);
             return (

@@ -18,23 +18,28 @@ export const global = {
 const panel = {
   display       : 'inline-block',
   verticalAlign : 'top',
-  height        : '100%',
-
-  '@media (max-width: 680px)' : {
-    width : '100%'
-  }
+  height        : '100%'
 };
 
 export const leftPanel = {
   ...panel,
   width           : '36%',
   overflow        : 'hidden',
-  backgroundColor : '#393E46'
+  backgroundColor : '#393E46',
+
+  '@media (max-width: 680px)' : {
+    width  : '100%',
+    height : '52em'
+  }
 };
 
 export const rightPanel = {
   ...panel,
   width : '64%',
+
+  '@media (max-width: 680px)' : {
+    width : '100%'
+  },
 
   '@media (min-width: 680px)' : {
     overflow : 'auto'

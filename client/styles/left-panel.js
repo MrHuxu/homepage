@@ -2,7 +2,7 @@ import { keyframes } from 'radium';
 
 export const global = {
   '.left-panel *' : {
-    color : '#ECF0F1'
+    color : '#DCDCDC'
   },
 
   '.left-panel li' : {
@@ -12,15 +12,39 @@ export const global = {
 
 export const container = {
   position : 'relative',
-  width    : '100%',
   height   : '100%',
-  padding  : '4em 0 0 0'
+  padding  : '6em 3em 0 0'
 };
 
-export const titleCommon = {
-  fontSize   : '2.5em',
-  lineHeight : '1.3em',
-  position   : 'absolute'
+export const avatar = {
+  position : 'relative',
+  height   : '24em',
+
+  img : {
+    position : 'absolute',
+    right    : 0,
+    width    : '24em'
+  }
+};
+
+export const introduction = {
+  position  : 'relative',
+  textAlign : 'right',
+  margin    : '1.2em 0 0 0',
+
+  container : {
+    margin : '0.5em 0 0 0',
+
+    prefix : {
+      color    : '#888',
+      fontSize : '1.9em',
+      margin   : '0 0.3em 0 0'
+    },
+
+    content : {
+      fontSize : '1.9em'
+    }
+  }
 };
 
 const titleKeyframes = keyframes({
@@ -34,12 +58,23 @@ export const title = {
   container : {
     position : 'relative',
     width    : '100%',
-    height   : '3.3em',
+    height   : '2.3em',
     overflow : 'hidden',
+    margin   : '0.5em 0 0 0',
+
+    prefix : {
+      color    : '#888',
+      position : 'absolute',
+      right    : '7.8em',
+      fontSize : '1.9em',
+      top      : '-0.15em'
+    },
 
     label : {
-      ...titleCommon,
-      width         : '260px',
+      fontSize      : '1.9em',
+      lineHeight    : '1.3em',
+      position      : 'absolute',
+      width         : '18.5em',
       right         : '0',
       textAlign     : 'right',
       animation     : '10s linear 0s normal none infinite',
@@ -48,56 +83,14 @@ export const title = {
   }
 };
 
-export const skills = {
-  position  : 'absolute',
-  textAlign : 'right',
-  float     : 'right',
-  right     : '0',
-  bottom    : '15em',
-
-  title : {
-    margin : '0 21px 18px 0',
-    color  : '#777'
-  },
-
-  li : level => ({
-    margin : '0 0 16px 0',
-
-    p : {
-      margin : '0 12px 0 0'
-    },
-
-    progress : {
-      position        : 'relative',
-      width           : '480px',
-      height          : '2px',
-      margin          : '5px 0 0 0',
-      backgroundColor : 'rgba(255, 255, 255, 0)',
-
-      icon : {
-        position : 'absolute',
-        top      : '-8px',
-        left     : `${100 - level}%`
-      },
-
-      done : {
-        margin          : `0 0 0 ${100 - level}%`,
-        width           : `${level}%`,
-        height          : '2px',
-        backgroundColor : 'rgb(236, 240, 241)'
-      }
-    }
-  })
-};
-
 export const icons = {
   position : 'absolute',
-  right    : '2em',
-  bottom   : '7em',
+  right    : '3em',
+  bottom   : '9em',
 
   li : {
     display : 'inline-block',
-    margin  : '0 0 0 15px',
+    margin  : '0 0 0 1.5em',
 
     a : {
       fontSize : '2em',

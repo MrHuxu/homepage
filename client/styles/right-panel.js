@@ -1,5 +1,3 @@
-import { titleCommon } from './left-panel';
-
 export const global = {
   '.right-panel *' : {
     color : '#929292'
@@ -9,25 +7,26 @@ export const global = {
 export const container = {
   position        : 'relative',
   width           : '100%',
-  padding         : '4em 2em 2em 2em',
+  padding         : '6em 2em 2em 2em',
   backgroundColor : '#ECF0F1'
 };
 
-export const title = {
-  ...titleCommon,
-  position : 'unset',
-  color    : '#393E46',
-  left     : '0'
+const subModuleTitle = {
+  color    : '#787878',
+  margin   : '0 0 0 0.6em',
+  fontSize : '2em'
 };
 
-const subModuleTitle = {
-  color : '#AAA'
+export const divider = {
+  margin          : '2.7em 0 4em 0',
+  width           : '100%',
+  height          : '2px',
+  backgroundColor : '#DEDEDE'
 };
 
 export const education = {
   title : {
-    ...subModuleTitle,
-    margin : '4em 0 0 0'
+    ...subModuleTitle
   },
 
   container : {
@@ -40,6 +39,7 @@ export const education = {
     },
 
     website : {
+      color    : '#00ADB5',
       fontSize : '1.3em'
     },
 
@@ -65,6 +65,7 @@ export const career = {
     },
 
     website : {
+      color    : '#00ADB5',
       fontSize : '1.3em'
     },
 
@@ -72,6 +73,73 @@ export const career = {
       display  : 'inline-block',
       fontSize : '1.3em'
     }
+  }
+};
+
+export const skills = {
+  title : {
+    ...subModuleTitle
+  },
+
+  container : {
+    padding : '2em',
+
+    li : level => ({
+      position : 'relative',
+      margin   : '0.5em 0',
+
+      container : {
+        height : '1em',
+
+        p : {
+          position        : 'absolute',
+          top             : '-0.2em',
+          padding         : '0 0.7em 0 0',
+          fontSize        : '1.2em',
+          backgroundColor : '#ECF0F1',
+          zIndex          : '900'
+        },
+
+        done : {
+          position        : 'absolute',
+          height          : '2px',
+          top             : '0.6em',
+          width           : `${level * 0.65}%`,
+          backgroundColor : '#AAA',
+          zIndex          : '800',
+
+          '@media (max-width: 1600px)' : {
+            width : `${level * 0.75}%`
+          },
+
+          '@media (max-width: 1200px)' : {
+            width : `${level * 0.85}%`
+          },
+
+          '@media (max-width: 680px)' : {
+            width : `${level * 0.95}%`
+          }
+        },
+
+        icon : {
+          position : 'absolute',
+          top      : '0.2em',
+          left     : `${level * 0.65}%`,
+
+          '@media (max-width: 1600px)' : {
+            left : `${level * 0.75}%`
+          },
+
+          '@media (max-width: 1200px)' : {
+            left : `${level * 0.85}%`
+          },
+
+          '@media (max-width: 680px)' : {
+            left : `${level * 0.95}%`
+          }
+        }
+      }
+    })
   }
 };
 
@@ -84,7 +152,7 @@ export const open = {
     padding : '2em',
 
     item : {
-      margin : '0 0 15px 0',
+      margin : '0 0 1em 0',
 
       website : {
         color    : '#00ADB5',
@@ -109,18 +177,18 @@ export const work = {
     padding : '2em',
 
     item : {
-      margin : '0 0 15px 0',
+      margin : '0 0 1em 0',
 
       name : {
         display  : 'inline-block',
-        color    : '#5D8994',
-        margin   : '0 0.4em 0 0',
+        color    : '#588D9C',
+        margin   : '0 0.6em 0 0',
         fontSize : '1.3em'
       },
 
       techStack : {
         display  : 'inline-block',
-        color    : '#F8C2CE',
+        color    : '#C1C0B9',
         fontSize : '1.1em'
       },
 
@@ -135,7 +203,7 @@ export const work = {
 export const websites = {
   title : {
     ...subModuleTitle,
-    margin : '0 0 1.1em 0'
+    marginBottom : '1em'
   },
 
   li : width => ({
@@ -144,7 +212,7 @@ export const websites = {
     padding         : '0.5em 0.5em',
     backgroundColor : '#E6E6E6',
     borderRadius    : '0.5em',
-    margin          : '10px',
+    margin          : '1em',
 
     container : {
       display : 'inline-block',
@@ -156,7 +224,7 @@ export const websites = {
       },
 
       a : {
-        color    : '#0079BF',
+        color    : '#00ADB5',
         fontSize : '1.2em'
       },
 
