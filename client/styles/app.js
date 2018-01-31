@@ -24,8 +24,15 @@ const panel = {
 export const leftPanel = {
   ...panel,
   width           : '36%',
-  overflow        : 'hidden',
   backgroundColor : '#393E46',
+
+  '@media (min-height: 52em)' : {
+    overflow : 'hidden'
+  },
+
+  '@media (max-height: 52em)' : {
+    overflow : 'auto'
+  },
 
   '@media (max-width: 680px)' : {
     width  : '100%',

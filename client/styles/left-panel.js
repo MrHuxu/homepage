@@ -13,7 +13,11 @@ export const global = {
 export const container = {
   position : 'relative',
   height   : '100%',
-  padding  : '6em 3em 0 0'
+  padding  : '6em 3em 0 0',
+
+  '@media (max-height: 52em)' : {
+    height : '52em'
+  }
 };
 
 export const avatar = {
