@@ -41,12 +41,12 @@ export const introduction = {
 
     prefix : {
       color    : '#888',
-      fontSize : '1.9em',
+      fontSize : '1.7em',
       margin   : '0 0.3em 0 0'
     },
 
     content : {
-      fontSize : '1.9em'
+      fontSize : '1.7em'
     }
   }
 };
@@ -70,12 +70,12 @@ export const title = {
       color    : '#888',
       position : 'absolute',
       right    : '7.8em',
-      fontSize : '1.9em',
+      fontSize : '1.7em',
       top      : '-0.15em'
     },
 
     label : {
-      fontSize      : '1.9em',
+      fontSize      : '1.7em',
       lineHeight    : '1.3em',
       position      : 'absolute',
       width         : '18.5em',
