@@ -53,8 +53,8 @@ export const introduction = {
 
 const titleKeyframes = keyframes({
   '0%, 20%, 100%' : { top: '0%' },
-  '25%, 45%'      : { top: '-99%' },
-  '50%, 70%'      : { top: '-199%' },
+  '25%, 45%'      : { top: '-98%' },
+  '50%, 70%'      : { top: '-197%' },
   '75%, 95%'      : { top: '-99%' }
 }, 'title');
 
