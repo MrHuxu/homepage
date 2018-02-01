@@ -16,7 +16,7 @@ export const container = {
   padding  : '5em 3em 5em 0',
 
   '@media (max-height: 52em)' : {
-    height : '52em'
+    height : '42em'
   }
 };
 
