@@ -64,7 +64,7 @@ export const title = {
     width    : '100%',
     height   : '2.3em',
     overflow : 'hidden',
-    margin   : '0.5em 0 0 0',
+    margin   : '0.7em 0 0 0',
 
     prefix : {
       color    : '#888',
