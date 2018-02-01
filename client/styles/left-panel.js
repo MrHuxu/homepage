@@ -52,37 +52,40 @@ export const introduction = {
 };
 
 const titleKeyframes = keyframes({
-  '0%, 20%, 100%' : { top: '0' },
-  '25%, 45%'      : { top: '-1.3em' },
-  '50%, 70%'      : { top: '-2.6em' },
-  '75%, 95%'      : { top: '-1.3em' }
+  '0%, 20%, 100%' : { top: '0%' },
+  '25%, 45%'      : { top: '-99%' },
+  '50%, 70%'      : { top: '-199%' },
+  '75%, 95%'      : { top: '-99%' }
 }, 'title');
 
 export const title = {
   container : {
     position : 'relative',
     width    : '100%',
-    height   : '2.3em',
+    height   : '3.4em',
     overflow : 'hidden',
-    margin   : '0.7em 0 0 0',
+    margin   : '0.2em 0 0 0',
 
     prefix : {
-      color    : '#888',
-      position : 'absolute',
-      right    : '7.8em',
-      fontSize : '1.7em',
-      top      : '-0.15em'
+      color      : '#888',
+      position   : 'absolute',
+      right      : '7.8em',
+      fontSize   : '1.7em',
+      lineHeight : '2em'
     },
 
     label : {
-      fontSize      : '1.7em',
-      lineHeight    : '1.3em',
       position      : 'absolute',
       width         : '18.5em',
       right         : '0',
       textAlign     : 'right',
       animation     : '10s linear 0s normal none infinite',
-      animationName : titleKeyframes
+      animationName : titleKeyframes,
+
+      div : {
+        fontSize   : '1.7em',
+        lineHeight : '2em'
+      }
     }
   }
 };

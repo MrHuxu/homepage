@@ -18,25 +18,25 @@ class LeftPanel extends Component {
 
         <div style={ introduction }>
           <div style={ introduction.container }>
-            <span style={ introduction.container.prefix }>I'm</span>
+            <span style={ introduction.container.prefix }>I'm&nbsp;</span>
             <span style={ introduction.container.content }>xhu(胡旭),</span>
           </div>
           <div style={ introduction.container }>
-            <span style={ introduction.container.prefix }>aka</span>
+            <span style={ introduction.container.prefix }>aka&nbsp;</span>
             <span style={ introduction.container.content }>hxtheone,</span>
           </div>
           <div style={ introduction.container }>
-            <span style={ introduction.container.prefix }>aka</span>
+            <span style={ introduction.container.prefix }>aka&nbsp;</span>
             <span style={ introduction.container.content }>TDFJ(跳大飞机).</span>
           </div>
         </div>
 
         <div style={ title.container }>
-          <span style={ title.container.prefix }>A</span>
+          <div style={ title.container.prefix }>A</div>
           <div style={ title.container.label }>
-              Programmer<br />
-              Web Developer<br />
-              Fighter !<br />
+            <div style={ title.container.label.div }>Programmer</div>
+            <div style={ title.container.label.div }>Web Developer</div>
+            <div style={ title.container.label.div }>Fighter !</div>
           </div>
         </div>
 
