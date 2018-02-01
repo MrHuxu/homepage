@@ -12,8 +12,8 @@ export const global = {
 
 export const container = {
   position : 'relative',
-  height   : '100%',
-  padding  : '6em 3em 0 0',
+  height   : 'calc(100% - 10em)',
+  padding  : '5em 3em 5em 0',
 
   '@media (max-height: 52em)' : {
     height : '52em'
@@ -90,7 +90,7 @@ export const title = {
 export const icons = {
   position : 'absolute',
   right    : '3em',
-  bottom   : '8em',
+  bottom   : '5em',
 
   li : {
     display : 'inline-block',
