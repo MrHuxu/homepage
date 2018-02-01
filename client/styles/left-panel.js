@@ -90,7 +90,7 @@ export const title = {
 export const icons = {
   position : 'absolute',
   right    : '3em',
-  bottom   : '9em',
+  bottom   : '8em',
 
   li : {
     display : 'inline-block',
