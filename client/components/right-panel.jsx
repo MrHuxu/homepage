@@ -7,12 +7,11 @@ import {
   career as careerStyle,
   skills as skillsStyle,
   open as openStyle,
-  work as workStyle,
   websites as websitesStyle
 } from '../styles/right-panel';
 
 import { education, career, skills, projects, websites } from '../data';
-const { open, work } = projects;
+const { open } = projects;
 
 @Radium
 class RightPanel extends Component {
@@ -78,20 +77,6 @@ class RightPanel extends Component {
               </li>
             );
           }
-          ) }
-        </ul>
-
-        <div style={ divider } />
-
-        <h4 style={ workStyle.title }> Projects</h4>
-        <ul style={ workStyle.container }>
-          { work.map(w => (
-            <li key={ w.name } style={ workStyle.container.item }>
-              <div style={ workStyle.container.item.name }> { w.name } </div>
-              <div style={ workStyle.container.item.techStack }> { w.techStack.join(' · ') } </div>
-              <div style={ workStyle.container.item.description }> { w.description.label } </div>
-            </li>
-          )
           ) }
         </ul>
 
