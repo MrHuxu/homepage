@@ -34,23 +34,23 @@ export const websites = [{
   width   : 23
 }];
 
-export const skills = [{
-  name  : 'Go',
-  level : '73'
-}, {
-  name  : 'Docker',
-  level : '50'
-}, {
+export const skills = [ {
   name  : 'Ruby on Rails',
-  level : '60'
+  level : '75'
+}, {
+  name  : 'Go',
+  level : '90'
 }, {
   name  : 'React.js & Redux',
-  level : '70'
+  level : '80'
 }, {
   name  : 'Node.js',
-  level : '70'
+  level : '80'
 }, {
   name  : 'HTML & CSS',
+  level : '70'
+}, {
+  name  : 'Docker',
   level : '60'
 }];
 

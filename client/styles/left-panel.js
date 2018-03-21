@@ -15,7 +15,7 @@ export const container = {
   height   : 'calc(100% - 10em)',
   padding  : '5em 3em 5em 0',
 
-  '@media (max-height: 52em)' : {
+  '@media (max-width: 680px)' : {
     height : '42em'
   }
 };
@@ -52,10 +52,10 @@ export const introduction = {
 };
 
 const titleKeyframes = keyframes({
-  '0%, 20%, 100%' : { top: '0%' },
-  '25%, 45%'      : { top: '-98%' },
-  '50%, 70%'      : { top: '-197%' },
-  '75%, 95%'      : { top: '-99%' }
+  '0%, 20%, 100%' : { transform: 'translateY(0)' },
+  '25%, 45%'      : { transform: 'translateY(calc(-100% / 3))' },
+  '50%, 70%'      : { transform: 'translateY(calc(-200% / 3))' },
+  '75%, 95%'      : { transform: 'translateY(calc(-100% / 3))' }
 }, 'title');
 
 export const title = {
@@ -64,7 +64,6 @@ export const title = {
     width    : '100%',
     height   : '3.4em',
     overflow : 'hidden',
-    margin   : '0.2em 0 0 0',
 
     prefix : {
       color      : '#888',

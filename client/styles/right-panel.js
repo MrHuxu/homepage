@@ -102,16 +102,16 @@ export const skills = {
         done : {
           position        : 'absolute',
           height          : '2px',
-          top             : '0.6em',
+          top             : '0.4em',
           width           : `${level * 0.65}%`,
           backgroundColor : '#AAA',
           zIndex          : '800',
 
-          '@media (max-width: 1600px)' : {
+          '@media (max-width: 1600px) and (min-width: 1201px)' : {
             width : `${level * 0.75}%`
           },
 
-          '@media (max-width: 1200px)' : {
+          '@media (max-width: 1200px) and (min-width: 681px)' : {
             width : `${level * 0.85}%`
           },
 
@@ -122,14 +122,14 @@ export const skills = {
 
         icon : {
           position : 'absolute',
-          top      : '0.2em',
+          top      : '0.05em',
           left     : `${level * 0.65}%`,
 
-          '@media (max-width: 1600px)' : {
+          '@media (max-width: 1600px) and (min-width: 1201px)' : {
             left : `${level * 0.75}%`
           },
 
-          '@media (max-width: 1200px)' : {
+          '@media (max-width: 1200px) and (min-width: 681px)' : {
             left : `${level * 0.85}%`
           },
 
