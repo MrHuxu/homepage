@@ -71,7 +71,14 @@ export const education = [{
 }];
 
 export const career = [{
-  timeRange   : '2014/07 ~ Now',
+  timeRange   : '2018/04/03 ~ Now',
+  description : {
+    url   : 'http://didichuxing.com/',
+    label : 'DiDi Chuxing',
+    title : 'Senior Software Engineer'
+  }
+}, {
+  timeRange   : '2014/07/14 ~ 2018/04/02',
   description : {
     url   : 'http://freewheel.tv/',
     label : 'FreeWheel Beijing Office',

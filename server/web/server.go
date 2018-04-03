@@ -10,33 +10,39 @@ import (
 	"github.com/MrHuxu/homepage/server/config"
 )
 
-var IsReleaseMode = os.Getenv("GIN_MODE") == "release"
-var IsInsideDocker = os.Getenv("INSIDE_DOCKER") == "true"
+var (
+	isReleaseMode  = os.Getenv("GIN_MODE") == "release"
+	isInsideDocker = os.Getenv("INSIDE_DOCKER") == "true"
+)
 
-type Server struct {
-	Engine *gin.Engine
-	Port   int
+type Server interface {
+	Run() error
 }
 
-func NewServer(cfg config.ConfigInterface) *Server {
-	if IsReleaseMode {
+type impl struct {
+	engine *gin.Engine
+	port   int
+}
+
+func NewServer(cfg config.Config) Server {
+	if isReleaseMode {
 		gin.SetMode(gin.ReleaseMode)
 		gin.DisableConsoleColor()
 		logToFile()
 	}
 
-	server := &Server{
-		Engine: gin.Default(),
-		Port:   cfg.ServerPort(),
+	server := &impl{
+		engine: gin.Default(),
+		port:   cfg.ServerPort(),
 	}
-	server.Engine.LoadHTMLGlob(cfg.ServerTemplatesPath())
-	server.Engine.Static("/assets", cfg.ServerPublicPath())
-	server.RegisterRoutes()
+	server.engine.LoadHTMLGlob(cfg.ServerTemplatesPath())
+	server.engine.Static("/assets", cfg.ServerPublicPath())
+	server.registerRoutes()
 	return server
 }
 
-func (svr *Server) Run() {
-	svr.Engine.Run(":" + strconv.Itoa(svr.Port))
+func (i *impl) Run() error {
+	return i.engine.Run(":" + strconv.Itoa(i.port))
 }
 
 func logToFile() {
@@ -47,7 +53,7 @@ func logToFile() {
 		file, _ = os.Create("log/gin.log")
 	}
 
-	if IsInsideDocker {
+	if isInsideDocker {
 		gin.DefaultWriter = io.MultiWriter(os.Stdout, file)
 	} else {
 		gin.DefaultWriter = io.MultiWriter(file)

@@ -5,16 +5,16 @@ import (
 	"net/http"
 )
 
-func Index(c *gin.Context) {
+func index(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.tmpl", gin.H{
-		"prd":   IsReleaseMode,
+		"prd":   isReleaseMode,
 		"title": "xhu",
 	})
 }
 
-func (server *Server) RegisterRoutes() {
-	indexRoutes := server.Engine.Group("/")
+func (i *impl) registerRoutes() {
+	indexRoutes := i.engine.Group("/")
 	{
-		indexRoutes.GET("/", Index)
+		indexRoutes.GET("/", index)
 	}
 }

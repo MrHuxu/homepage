@@ -57,6 +57,10 @@ export const career = {
   container : {
     padding : '2em',
 
+    item : {
+      margin : '5px 0'
+    },
+
     timeRange : {
       display  : 'inline-block',
       color    : '#FBA77A',

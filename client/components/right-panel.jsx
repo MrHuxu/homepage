@@ -44,7 +44,7 @@ class RightPanel extends Component {
         <h4 style={ careerStyle.title }> Career </h4>
         <ul style={ careerStyle.container }>
           { career.map(c => (
-            <li key={ c.timeRange }>
+            <li key={ c.timeRange } style={ careerStyle.container.item }>
               <div style={ careerStyle.container.timeRange }> { c.timeRange } </div>
               ,&nbsp;
               <div style={ careerStyle.container.description }> { c.description.title } at&nbsp;</div>
