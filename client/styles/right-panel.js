@@ -58,7 +58,7 @@ export const career = {
     padding : '2em',
 
     item : {
-      margin : '5px 0'
+      margin : '0 0 1em 0'
     },
 
     timeRange : {
@@ -155,7 +155,7 @@ export const open = {
     padding : '2em',
 
     item : {
-      margin : '0 0 1em 0',
+      margin : career.container.item.margin,
 
       website : {
         color    : '#00ADB5',
