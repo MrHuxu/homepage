@@ -6,8 +6,8 @@ import (
 	"github.com/dop251/goja"
 	"github.com/gin-gonic/gin"
 
-	"github.com/MrHuxu/react-go-ssr-boilerplate/server/conf"
-	"github.com/MrHuxu/react-go-ssr-boilerplate/server/middlewares"
+	"github.com/MrHuxu/homepage/server/conf"
+	"github.com/MrHuxu/homepage/server/middlewares"
 )
 
 // DefaultServer exports an instance of interface Server

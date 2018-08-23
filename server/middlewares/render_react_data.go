@@ -7,7 +7,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/MrHuxu/react-go-ssr-boilerplate/server/react"
+	"github.com/MrHuxu/homepage/server/react"
 )
 
 // RenderReactData renders the react data to given template
