@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
-const baseContainer = styled.div`
-  display       : inline-block;
-  vertical-align : top;
-  height        : 100%;
+export const Container = styled.div`
+  height: 100%;
 `;
 
-export const LeftPanelContainer = styled(baseContainer)`
+const subContainer = styled.div`
+  display        : inline-block;
+  vertical-align : top;
+  height         : 100%;
+`;
+
+export const LeftPanelContainer = styled(subContainer)`
   width            : 36%;
   background-color : #393E46;
 
@@ -24,7 +28,7 @@ export const LeftPanelContainer = styled(baseContainer)`
   }
 `;
 
-export const RightPanelContainer = styled(baseContainer)`
+export const RightPanelContainer = styled(subContainer)`
   width : 64%;
 
   @media (max-width: 680px) {

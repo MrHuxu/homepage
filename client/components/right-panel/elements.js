@@ -20,13 +20,17 @@ const title = styled.h4`
 `;
 
 export const Education = {
-  title : styled(title),
+  title : styled(title)``,
 
   container : styled.ul`
     padding : 2em;
   `,
 
   item : {
+    container : styled.li`
+      color : #929292;
+    `,
+
     timeRange : styled.div`
       display   : inline-block;
       color     : #FBA77A;
@@ -46,7 +50,7 @@ export const Education = {
 };
 
 export const Career = {
-  title : styled(title),
+  title : styled(title)``,
 
   container : styled.ul`
     padding : 2em;
@@ -54,6 +58,7 @@ export const Career = {
 
   item : {
     container : styled.li`
+      color  : #929292;
       margin : 0 0 1em 0
     `,
 
@@ -76,7 +81,7 @@ export const Career = {
 };
 
 export const Skills = {
-  title : styled(title),
+  title : styled(title)``,
 
   container : styled.ul`
     padding : 2em;
@@ -84,6 +89,7 @@ export const Skills = {
 
   items : level => ({
     li : styled.li`
+      color    : #929292;
       position : relative;
       margin   : 0.5em 0;
     `,
@@ -98,7 +104,7 @@ export const Skills = {
       padding          : 0 0.7em 0 0;
       font-size        : 1.2em;
       background-color : #ECF0F1;
-      zIndex           : 900;
+      z-index          : 900;
     `,
 
     done : styled.div`
@@ -143,7 +149,7 @@ export const Skills = {
 };
 
 export const Open = {
-  title : styled(title),
+  title : styled(title)``,
 
   container : styled.ul`
     padding : 2em;
@@ -151,6 +157,7 @@ export const Open = {
 
   item : {
     container : styled.li`
+      color  : #929292;
       margin : 0 0 1em 0;
     `,
 
@@ -169,15 +176,16 @@ export const Websites = {
 
   items : width => ({
     container : styled.li`
-      display          : inline-block;
-      width            : ${width}em;
-      padding          : 0.5em 0.5em;
-      background-color : #E6E6E6;
-      borderRadius     : 0.5em;
-      margin           : 1em;
+      display           : inline-block;
+      width             : ${width}em;
+      padding           : 0.5em 0.5em;
+      background-color  : #E6E6E6;
+      border-radius     : 0.5em;
+      margin            : 1em;
     `,
 
     subContainer : styled.div`
+      color   : #929292;
       display : inline-block;
     `,
 

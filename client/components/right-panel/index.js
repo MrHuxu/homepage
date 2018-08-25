@@ -10,7 +10,7 @@ const RightPanel = () => (
     <Education.title> Education </Education.title>
     <Education.container>
       { education.map(e => (
-        <li key={ e.timeRange }>
+        <Education.item.container key={ e.timeRange }>
           <Education.item.timeRange>{ e.timeRange }</Education.item.timeRange>
       ,&nbsp;
           <Education.item.description> { e.description.title } at&nbsp;</Education.item.description>
@@ -20,7 +20,7 @@ const RightPanel = () => (
           >
             { e.description.label }
           </Education.item.website>
-        </li>
+        </Education.item.container>
       )) }
     </Education.container>
 
@@ -77,6 +77,11 @@ const RightPanel = () => (
           </Open.item.website>
         </Open.item.container>
       )) }
+      <Open.item.container>
+        <Open.item.website>
+          etc.
+        </Open.item.website>
+      </Open.item.container>
     </Open.container>
 
     <Divider />

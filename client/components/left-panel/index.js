@@ -21,7 +21,7 @@ const LeftPanel = () => (
       </Intro.item.container>
       <Intro.item.container>
         <Intro.item.prefix>aka&nbsp;</Intro.item.prefix>
-        <Intro.item.content>TDFJ(跳打飞机),</Intro.item.content>
+        <Intro.item.content>TDFJ(跳大飞机),</Intro.item.content>
       </Intro.item.container>
     </Intro.container>
 

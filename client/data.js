@@ -1,10 +1,11 @@
 export const links = [
-  { href: 'http://blog.xhu.me/', className: 'fa fa-pencil' },
-  { href: 'https://twitter.com/hxtheone', className: 'fa fa-twitter' },
-  { href: 'https://github.com/MrHuxu', className: 'fa fa-github' },
-  { href: 'http://steamcommunity.com/id/TDFJ', className: 'fa fa-steam' },
-  { href: 'http://www.linkedin.com/in/xu-hu-12a9ab111/', className: 'fa fa-linkedin' },
-  { href: 'mailto:hxtheone@gmail.com', className: 'fa fa-envelope-o' }
+  { href: 'http://blog.xhu.me/', className: 'fas fa-pencil-alt' },
+  { href: 'https://twitter.com/hxtheone', className: 'fab fa-twitter' },
+  { href: 'https://github.com/MrHuxu', className: 'fab fa-github' },
+  { href: 'https://my.playstation.com/profile/hxtheone', className: 'fab fa-playstation' },
+  { href: 'http://steamcommunity.com/id/TDFJ', className: 'fab fa-steam-symbol' },
+  { href: 'http://www.linkedin.com/in/xu-hu-12a9ab111/', className: 'fab fa-linkedin-in' },
+  { href: 'mailto:hxtheone@gmail.com', className: 'far fa-envelope' }
 ];
 
 export const websites = [{
@@ -92,6 +93,10 @@ export const projects = {
     url         : 'https://github.com/MrHuxu/blogo',
     description : 'A static blog written in Go'
   }, {
+    label       : 'MrHuxu/react-go-ssr-boilerplate',
+    url         : 'https://github.com/MrHuxu/react-go-ssr-boilerplate',
+    description : 'A boilerplate for building web application with React & Go using Server Side Rendering'
+  }, {
     label       : 'MrHuxu/react-go-boilerplate',
     url         : 'https://github.com/MrHuxu/react-go-boilerplate',
     description : 'A boilerplate for building web application with React & Go'
@@ -103,10 +108,6 @@ export const projects = {
     label       : 'MrHuxu/cn-city-select',
     url         : 'https://github.com/MrHuxu/cn-city-select',
     description : 'A directive being used to provide China region selector for Angular app'
-  }, {
-    label       : 'MrHuxu/server-rendering-demo',
-    url         : 'https://github.com/MrHuxu/server-rendering-demo',
-    description : 'A server side rendering demo, powered by react & react-router & redux & express'
   }, {
     label       : 'xcatliu/typescript-tutorial',
     url         : 'https://github.com/xcatliu/typescript-tutorial',

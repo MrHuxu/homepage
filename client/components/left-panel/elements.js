@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   position : relative;
@@ -25,9 +25,9 @@ export const Avatar = {
 
 export const Intro = {
   container : styled.div`
-    position  : relative;
+    position   : relative;
     text-align : right;
-    margin    : 1.2em 0 0 0;
+    margin     : 1.2em 0 0 0;
   `,
 
   item : {
@@ -36,16 +36,24 @@ export const Intro = {
     `,
 
     prefix : styled.span`
-      color    : #888;
+      color     : #888;
       font-size : 1.7em;
-      margin   : 0 0.3em 0 0;
+      margin    : 0 0.3em 0 0;
     `,
 
     content : styled.span`
-      fontSize : 1.7em;
+      font-size : 1.7em;
+      color     : #DCDCDC;
     `
   }
 };
+
+const titleKeyframes = keyframes`
+  0%, 20%, 100% { transform: translateY(0); }
+  25%, 45%      { transform: translateY(calc(-100% / 3)); }
+  50%, 70%      { transform: translateY(calc(-200% / 3)); }
+  75%, 95%      { transform: translateY(calc(-100% / 3)); }
+`;
 
 export const Title = {
   container : styled.div`
@@ -56,26 +64,27 @@ export const Title = {
   `,
 
   prefix : styled.div`
-    color      : #888;
-    position   : absolute;
-    right      : 7.8em;
+    color       : #888;
+    position    : absolute;
+    right       : 7.8em;
     font-size   : 1.7em;
     line-height : 2em;
   `,
 
   label : {
     container : styled.div`
-      position      : absolute;
-      width         : 18.5em;
-      right         : 0;
+      position       : absolute;
+      width          : 18.5em;
+      right          : 0;
       text-align     : right;
-      animation     : 10s linear 0s normal none infinite;
-      animation-name : titleKeyframes;
+      animation      : 10s linear 0s normal none infinite;
+      animation-name : ${titleKeyframes};
     `,
 
     item : styled.div`
       font-size   : 1.7em;
       line-height : 2em;
+      color       : #DCDCDC;
     `
   }
 };
@@ -95,7 +104,7 @@ export const Icons = {
 
     link : styled.a`
       font-size : 2em;
-      color    : rgba(255,255,255,0.4);
+      color     : rgba(255,255,255,0.4);
     `
   }
 };

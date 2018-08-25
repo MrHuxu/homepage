@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { LeftPanelContainer, RightPanelContainer } from './elements';
+import { Container, LeftPanelContainer, RightPanelContainer } from './elements';
 
 import LeftPanel from '../left-panel';
 import RightPanel from '../right-panel';
 
 const App = () => (
-  <div>
+  <Container>
     <LeftPanelContainer>
       <LeftPanel />
     </LeftPanelContainer>
@@ -14,7 +14,7 @@ const App = () => (
     <RightPanelContainer>
       <RightPanel />
     </RightPanelContainer>
-  </div>
+  </Container>
 );
 
 export default App;
