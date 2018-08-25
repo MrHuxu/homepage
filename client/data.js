@@ -8,7 +8,7 @@ export const links = [
 ];
 
 export const websites = [{
-  favicon : 'http://blog.xhu.me/assets/images/x-billabong.png',
+  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/x-billabong.png',
   url     : 'blog.xhu.me',
   label   : 'My blog',
   width   : 15
