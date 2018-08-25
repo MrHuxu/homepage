@@ -1,14 +1,29 @@
-import './styles/app.css';
-
 import React from 'react';
-import { render } from 'react-dom';
-import { StyleRoot } from 'radium';
+import { renderToString } from 'react-dom/server';
 
-import App from './components/app';
+import { Provider } from 'react-redux';
+import { createStaticStore } from './store';
 
-render(
-  <StyleRoot>
-    <App />
-  </StyleRoot>,
-  document.getElementById('homepage')
-);
+import { Switch, Route, StaticRouter } from 'react-router';
+import routes from './routes';
+
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+const sheet = new ServerStyleSheet();
+
+export const renderHtmlString = (url, data) => {
+  const html = renderToString(
+    <StyleSheetManager sheet={ sheet.instance }>
+      <Provider store={ createStaticStore(data) }>
+        <StaticRouter location={ url }>
+          <Switch>
+            { routes.map(route => (
+              <Route { ...route } />
+            )) }
+          </Switch>
+        </StaticRouter>
+      </Provider>
+    </StyleSheetManager>
+  );
+  const styles = sheet.getStyleTags();
+  return html + styles;
+};

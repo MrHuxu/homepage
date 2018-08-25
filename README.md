@@ -1,3 +1,3 @@
 # Homepage of xhu
 
-Powered by [react-go-boilerplate](https://github.com/MrHuxu/react-go-boilerplate/).
+Repo of [xhu.me](http://xhu.me) powered by [react-go-ssr-boilerplate](https://github.com/MrHuxu/react-go-ssr-boilerplate)

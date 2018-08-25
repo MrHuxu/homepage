@@ -1,11 +1,9 @@
 package main
 
 import (
-	"github.com/MrHuxu/homepage/server/config"
-	"github.com/MrHuxu/homepage/server/web"
+	"github.com/MrHuxu/homepage/server"
 )
 
 func main() {
-	server := web.NewServer(config.DefaultConfig)
-	server.Run()
+	server.DefaultServer.Run()
 }
