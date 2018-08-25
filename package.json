@@ -56,7 +56,8 @@
     "build-fe": "./node_modules/webpack/bin/webpack.js --config config/webpack.config.js",
     "build-be": "go build main.go",
     "build": "npm run build-fe && npm run build-be",
-    "prd": "npm run build && GIN_MODE=release ./main"
+    "prd": "npm run build && GIN_MODE=release ./main",
+    "deploy": "npm run build && sudo supervisorctl reload"
   },
   "repository": {
     "type": "git",
