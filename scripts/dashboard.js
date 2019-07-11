@@ -5,19 +5,19 @@ const { floor, max } = Math;
 
 const dashboard = screen({
   smartCSR : true,
-  title    : 'React & Go SSR Boilerplate Dashboard'
+  title    : 'Homepage Dashboard'
 });
 
 const commands = [{
   label   : 'Webpack Dev Server',
-  command : ['npm', ['run', 'webpack']],
+  command : ['npm', ['run', 'webpack-dev-server']],
   style   : {
     width  : floor(dashboard.width / 2),
     height : floor(dashboard.height / 2)
   }
 }, {
   label   : 'ESLint',
-  command : ['npm', ['run', 'lint']],
+  command : ['npm', ['run', 'lint-watch']],
   style   : {
     top    : floor(dashboard.height / 2),
     width  : floor(dashboard.width / 2),
