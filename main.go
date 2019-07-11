@@ -2,8 +2,10 @@ package main
 
 import (
 	"github.com/MrHuxu/homepage/server"
+	"github.com/MrHuxu/homepage/server/config"
 )
 
 func main() {
-	server.DefaultServer.Run()
+	server := server.New(config.DefaultConfig)
+	server.Run()
 }

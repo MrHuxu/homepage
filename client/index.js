@@ -1,31 +1,18 @@
 import 'core-js/stable';
 
 import React from 'react';
-import { renderToString } from 'react-dom/server';
+import { render } from 'react-dom';
 
-import { Provider } from 'react-redux';
-import { createStaticStore } from './store';
+import { Routes } from './routes';
 
-import { Switch, Route, StaticRouter } from 'react-router';
-import routes from './routes';
+import { Router } from 'react-router';
+import { createBrowserHistory } from 'history';
 
-import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
-const sheet = new ServerStyleSheet();
+const history = createBrowserHistory();
 
-export const renderHtmlString = (url, data) => {
-  const html = renderToString(
-    <StyleSheetManager sheet={ sheet.instance }>
-      <Provider store={ createStaticStore(data) }>
-        <StaticRouter location={ url }>
-          <Switch>
-            { routes.map(route => (
-              <Route { ...route } />
-            )) }
-          </Switch>
-        </StaticRouter>
-      </Provider>
-    </StyleSheetManager>
-  );
-  const styles = sheet.getStyleTags();
-  return styles + html;
-};
+render(
+  <Router history={ history }>
+    <Routes />
+  </Router>,
+  document.getElementById('homepage')
+);

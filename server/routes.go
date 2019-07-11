@@ -1,14 +1,18 @@
 package server
 
 import (
+	"net/http"
+
 	"github.com/gin-gonic/gin"
 )
 
-func (s *server) registerRoutes() {
-	s.GET("/", func(ctx *gin.Context) {
-		ctx.Set("res", map[string]interface{}{
-			"meta":  "xhu's homepage",
-			"title": "xhu",
-		})
+func Index(c *gin.Context) {
+	c.HTML(http.StatusOK, "index.tmpl", gin.H{
+		"prd":   IsReleaseMode,
+		"title": "xhu",
 	})
+}
+
+func (server *Server) RegisterRoutes() {
+	server.Engine.GET("/", Index)
 }

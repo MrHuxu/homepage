@@ -1,8 +1,14 @@
+import React from 'react';
+import { Switch, Route } from 'react-router';
+
 import Home from './components/home';
 import NoMatch from './components/404';
 
-export default [
-  { exact: true, path: '/', component: Home },
-
-  { path: '/404', component: NoMatch }
-];
+export const Routes = () => {
+  return (
+    <Switch>
+      <Route exact path="/" component={ Home } />
+      <Route component={ NoMatch } />
+    </Switch>
+  );
+};

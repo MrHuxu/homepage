@@ -6,11 +6,12 @@ debug
 gin-bin
 log/
 vendor/
-client/public/built/
 
 .sass-cache
 npm-debug.log
 yarn-error.log
+yarn.lock
 node_modules/
+client/public
 
 dump.rdb
