@@ -111,39 +111,24 @@ export const Skills = {
       position         : absolute;
       height           : 2px;
       top              : 0.4em;
-      width            : ${level * 0.65}%;
+      width            : ${level}%;
       background-color : #AAA;
       zIndex           : 800;
 
-      @media (max-width: 1600px) and (min-width: 1201px) {
-        width : ${level * 0.75}%;
+      @media (min-width: 1201px) {
+        width : ${level * 0.9}%;
       },
 
-      @media (max-width: 1200px) and (min-width: 681px) {
-        width : ${level * 0.85}%;
-      },
-
-      @media (max-width: 680px) {
-        width : ${level * 0.95}%;
-      }
     `,
 
     icon : styled.i`
       position : absolute;
       top      : 0.05em;
-      left     : ${level * 0.65}%;
+      left     : ${level}%;
 
-      @media (max-width: 1600px) and (min-width: 1201px) {
-        left : ${level * 0.75}%;
+      @media (min-width: 1201px) {
+        left : ${level * 0.9}%;
       },
-
-      @media (max-width: 1200px) and (min-width: 681px) {
-        left : ${level * 0.85}%;
-      },
-
-      @media (max-width: 680px) {
-        left : ${level * 0.95}%;
-      }
     `
   })
 };
