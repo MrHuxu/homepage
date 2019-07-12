@@ -13,7 +13,7 @@ module.exports = {
   },
 
   resolve : {
-    extensions : ['.jsx', '.js', '.json', '.less']
+    extensions : ['.jsx', '.js', '.json']
   },
 
   module : {
@@ -42,39 +42,6 @@ module.exports = {
           ]
         ]
       }
-    }, {
-      test    : /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loader  : 'url-loader',
-      options : {
-        limit    : 10000,
-        minetype : 'application/font-woff'
-      }
-    }, {
-      test   : /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loader : 'file-loader'
-    }, {
-      test    : /\.(jpe?g|png|gif|svg)$/i,
-      loader  : 'url-loader',
-      options : { limit: 10000 }
-    }, {
-      test : /\.css$/,
-      use  : [
-        'style-loader',
-        {
-          loader  : 'css-loader',
-          options : { importLoaders: 1 }
-        }
-      ]
-    }, {
-      test : /\.less$/,
-      use  : [
-        'style-loader',
-        { loader: 'css-loader' },
-        {
-          loader  : 'less-loader',
-          options : { javascriptEnabled: true }
-        }
-      ]
     }]
   },
 
