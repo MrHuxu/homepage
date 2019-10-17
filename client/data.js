@@ -8,45 +8,6 @@ export const links = [
   { href: 'mailto:hxtheone@gmail.com', className: 'far fa-envelope' }
 ];
 
-export const websites = [{
-  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/x-billabong.png',
-  url     : 'blog.xhu.me',
-  label   : 'My blog',
-  width   : 15
-}, {
-  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/yrel/favicon.png',
-  url     : 'yrel.xhu.me',
-  label   : 'A script language written in Go',
-  width   : 28
-}];
-
-export const skills = [ {
-  name  : 'Ruby on Rails',
-  level : '75'
-}, {
-  name  : 'Go',
-  level : '90'
-}, {
-  name  : 'React.js & Redux',
-  level : '80'
-}, {
-  name  : 'Node.js',
-  level : '80'
-}, {
-  name  : 'HTML & CSS',
-  level : '70'
-}, {
-  name  : 'Docker',
-  level : '60'
-}];
-
-export const contact = {
-  email   : 'hxtheone@gmail.com',
-  phone   : '18609669205',
-  github  : 'MrHuxu',
-  website : 'xhu.me'
-};
-
 export const education = [{
   timeRange   : '2010/09 ~ 2014/06',
   description : {
@@ -70,6 +31,26 @@ export const career = [{
     label : 'FreeWheel Beijing Office',
     title : 'Senior Software Engineer'
   }
+}];
+
+export const skills = [ {
+  name  : 'Ruby on Rails',
+  level : '75'
+}, {
+  name  : 'Go',
+  level : '90'
+}, {
+  name  : 'React.js & Redux',
+  level : '80'
+}, {
+  name  : 'Node.js',
+  level : '80'
+}, {
+  name  : 'HTML & CSS',
+  level : '70'
+}, {
+  name  : 'Docker',
+  level : '60'
 }];
 
 export const projects = {
@@ -99,3 +80,20 @@ export const projects = {
     description : 'TypeScript tutorial'
   }]
 };
+
+export const websites = [{
+  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/blog/x-billabong.png',
+  url     : 'blog.xhu.me',
+  label   : 'My blog',
+  width   : 15
+}, {
+  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/yrel/favicon.png',
+  url     : 'yrel.xhu.me',
+  label   : 'A script language written in Go',
+  width   : 28
+}, {
+  favicon : 'https://raw.githubusercontent.com/MrHuxu/img-repo/master/leetcode150/favicon.png',
+  url     : 'leetcode150.xhu.me',
+  label   : 'LeetCode problems solutions',
+  width   : 32
+}];
