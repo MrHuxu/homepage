@@ -7,7 +7,7 @@ import { links } from '../../data';
 const LeftPanel = () => (
   <Container>
     <Avatar.container>
-      <Avatar.img src="https://avatars3.githubusercontent.com/u/2713125?s=400&u=34b6e592249c652609a7242fe5a656a1f3929b86&v=4" />
+      <Avatar.img src="https://img.xhu.me/avatar/square.jpeg" />
     </Avatar.container>
 
     <Intro.container>
@@ -35,15 +35,15 @@ const LeftPanel = () => (
     </Title.container>
 
     <Icons.list>
-      { links.map(link => (
-        <Icons.item.container key={ link.href }>
+      {links.map(link => (
+        <Icons.item.container key={link.href}>
           <Icons.item.link
-            className={ link.className }
-            href={ link.href }
+            className={link.className}
+            href={link.href}
             target="_blank"
           />
         </Icons.item.container>
-      )) }
+      ))}
     </Icons.list>
   </Container>
 );
